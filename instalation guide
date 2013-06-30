@@ -16,3 +16,14 @@ In MySql Server, install the file socialNetwork_20130630.sql contains in the fol
 	harvestedSNSAngelGuardFB.
 	2.3. Create the folder 'logs' in the path /usr/local/snsangelguardfb/harvested
 
+3. Copy the file config.properties in the path /usr/local/snsangelguardfb/config and change the settings of the host's server.
+
+4. Copy the proyect harvestedSNSAngelGuard in the path /usr/local/snsangelguardfb/harvested
+
+5. Modifies the cron file of the Unix Server adding the next sentence:
+	00 3 * * * root /usr/local/snsangelguardfb/harvested/harvestedSNSAngelGuard/script/harvestedSNSAngelGuardFB.sh
+
+6. Copy SNSAngelGuardFB.war and SNSdataBaseIntegratorServer.war in the context of Apache Tomcat and start the Web Server.
+
+
+For more information, see the file instalationGuide_ES.pdf
