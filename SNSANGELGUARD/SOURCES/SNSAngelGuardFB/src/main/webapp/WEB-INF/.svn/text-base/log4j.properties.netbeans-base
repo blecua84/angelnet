@@ -1,9 +1,0 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-log4j.appender.file.MaxBackupIndex=1
-log4j.appender.file.layout.ConversionPattern=[%d{dd-MMM-yyyy HH\:mm\:ss}] %5p %t %c - %m%n
-log4j.appender.file.layout=org.apache.log4j.PatternLayout
-log4j.appender.file.File=${catalina.home}/logs/SNSAngelGuardFB.log
-log4j.appender.file=org.apache.log4j.RollingFileAppender
-log4j.appender.file.MaxFileSize=300KB
-log4j.logger.es.uah.cc.ie.sources=debug, file

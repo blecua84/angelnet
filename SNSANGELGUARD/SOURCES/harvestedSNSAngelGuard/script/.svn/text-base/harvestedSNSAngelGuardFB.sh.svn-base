@@ -1,7 +1,0 @@
-#!/bin/bash
-
-DATE=$(date +%Y_%m_%d);
-logFile=$HOME/msicilia/execute_harvesting_SNSAngelGuardFB_$DATE\.log;
-cd $HOME/msicilia/svn/harvestedSNSAngelGuard/
-mvn clean dependency:copy-dependencies package >> $logFile
-mvn exec:java -Dexec.mainClass="es.uah.cc.ie.harvestedsnsangelguard.Main" >> $logFile
