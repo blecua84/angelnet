@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="SNSdataBaseIntegratorServerPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>es.uah.cc.ie.persistence.RelationshipFacebook</class>
+        <class>es.uah.cc.ie.persistence.PresenceopenSocial</class>
+        <class>es.uah.cc.ie.persistence.ActionLinksFacebook</class>
+        <class>es.uah.cc.ie.persistence.UseropenSocialhasNameopenSocial</class>
+        <class>es.uah.cc.ie.persistence.MessageopenSocial</class>
+        <class>es.uah.cc.ie.persistence.AffiliationsFacebook</class>
+        <class>es.uah.cc.ie.persistence.SampleLikesFacebook</class>
+        <class>es.uah.cc.ie.persistence.TypeAffiliationsFacebook</class>
+        <class>es.uah.cc.ie.persistence.DrinkeropenSocial</class>
+        <class>es.uah.cc.ie.persistence.StreamFacebook</class>
+        <class>es.uah.cc.ie.persistence.CommentsFacebook</class>
+        <class>es.uah.cc.ie.persistence.CommentFacebook</class>
+        <class>es.uah.cc.ie.persistence.FriendsopenSocial</class>
+        <class>es.uah.cc.ie.persistence.OrganizationopenSocial</class>
+        <class>es.uah.cc.ie.persistence.UseropenSocialhasOrganizationopenSocialJOBS</class>
+        <class>es.uah.cc.ie.persistence.WorkHistoryFacebook</class>
+        <class>es.uah.cc.ie.persistence.SmokeropenSocial</class>
+        <class>es.uah.cc.ie.persistence.LikesFacebook</class>
+        <class>es.uah.cc.ie.persistence.FriendsLikesFacebook</class>
+        <class>es.uah.cc.ie.persistence.UseropenSocial</class>
+        <class>es.uah.cc.ie.persistence.User</class>
+        <class>es.uah.cc.ie.persistence.PhonesopenSocial</class>
+        <class>es.uah.cc.ie.persistence.EmailopenSocial</class>
+        <class>es.uah.cc.ie.persistence.PrivacyFacebook</class>
+        <class>es.uah.cc.ie.persistence.FriendsFacebook</class>
+        <class>es.uah.cc.ie.persistence.FamilyFacebook</class>
+        <class>es.uah.cc.ie.persistence.EducationHistoryFacebook</class>
+        <class>es.uah.cc.ie.persistence.UseropenSocialhasFriendsopenSocial</class>
+        <class>es.uah.cc.ie.persistence.UserFacebook</class>
+        <class>es.uah.cc.ie.persistence.NameopenSocial</class>
+        <class>es.uah.cc.ie.persistence.AddressopenSocial</class>
+        <class>es.uah.cc.ie.persistence.UrlopenSocial</class>
+        <class>es.uah.cc.ie.persistence.LocationFacebook</class>
+        <class>es.uah.cc.ie.persistence.LookingForopenSocial</class>
+        <class>es.uah.cc.ie.persistence.GenderopenSocial</class>
+        <class>es.uah.cc.ie.persistence.MessageTypeopenSocial</class>
+        <class>es.uah.cc.ie.persistence.LocationfacebookhasuserfacebookCURRENTLOCATION</class>
+        <class>es.uah.cc.ie.persistence.GuardianSettings</class>
+        <class>es.uah.cc.ie.persistence.SettingsfltWall</class>
+        <class>es.uah.cc.ie.persistence.SettingsfltFriends</class>
+        <class>es.uah.cc.ie.persistence.LocaleSettings</class>
+        <class>es.uah.cc.ie.persistence.SettingsfltVist</class>
+        <class>es.uah.cc.ie.persistence.UserSettings</class>
+        <class>es.uah.cc.ie.persistence.SettingsAngels</class>
+        <class>es.uah.cc.ie.persistence.SettingsfltPriv</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/socialNetwork"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="tragasables"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>

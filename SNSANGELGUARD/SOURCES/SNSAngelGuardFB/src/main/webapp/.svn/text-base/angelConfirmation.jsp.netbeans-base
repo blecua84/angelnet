@@ -1,0 +1,63 @@
+<%-- 
+    Document   : angelConfirmation
+    Created on : 02-may-2011, 11:48:22
+    Author     : tote
+--%>
+
+<%@page import="es.uah.cc.ie.SNSWebServicesClient.SNSdataBaseClient"%>
+<%@page import="java.net.URLDecoder"%>
+<%@page import="es.uah.cc.ie.sources.UserSettings"%>
+<%@page import="org.codehaus.jettison.json.JSONObject"%>
+<%@page import="es.uah.cc.ie.sources.SNSdataBaseIntegrator"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+            //Obtenemos la conexión a Facebook
+            SNSdataBaseIntegrator snsDB = SNSdataBaseIntegrator.getSessionInstance(request);
+            snsDB.getLoginAppOffline(request, response);
+            snsDB.setClient(new SNSdataBaseClient());
+
+            String uidPublic = request.getParameter("par1");
+            String idAngel = request.getParameter("par2");
+            boolean accept = request.getParameter("par3").equals("1");
+
+            // Obtener información de userSettings por su uidPublic
+            JSONObject jsonUser = snsDB.getJsonUserByUidPublic(uidPublic);
+            snsDB.loadUserConnected(jsonUser);
+            snsDB.loadLocaleSettings();
+
+            JSONObject jsonAngel = snsDB.getJsonAngel(idAngel, jsonUser.getString("uid"));
+
+            if (!jsonAngel.toString().equals("{}")) {
+                if (jsonAngel.getString("confirmAngel").equals("0")) {
+
+                    jsonAngel.put("confirmAngel", "1");
+                    if (accept) {
+                        jsonAngel.put("acceptAngel", "1");
+                    } else {
+                        jsonAngel.put("acceptAngel", "0");
+                    }
+
+                    // Guardamos la configuracion del angel
+                    snsDB.setJsonAngel(jsonAngel);
+
+                    if (accept) {
+                        // Guardamos la información de configuración
+                        snsDB.checkAngelConfirmation(request, response, jsonUser);
+                        System.out.println("REALIZANDO PRIMER CHECKEO");
+                        // Se realiza el primer chequeo de información
+                        snsDB.firstCheckAngelConfirmation(request, jsonAngel);
+                    }
+
+                    // Mensaje de Confirmacion
+                    response.sendRedirect(request.getContextPath() + "/informationMessage.jsp?par1=0&par2=" + uidPublic);
+                } else {
+                    // Mensaje de Aviso ("El usuario ya está confirmado")
+                    response.sendRedirect(request.getContextPath() + "/informationMessage.jsp?par1=1&par2=" + uidPublic);
+                }
+            } else {
+                // Mensaje de Error ("El angel indicado ha sido borrado por el usuario")
+                response.sendRedirect(request.getContextPath() + "/informationMessage.jsp?par1=2&par2=" + uidPublic);
+            }
+
+%>

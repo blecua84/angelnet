@@ -1,0 +1,163 @@
+ /* 
+    Document   : divMenuFacebook
+    Created on : 31-mar-2011, 12:04:44
+    Author     : tote
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    padding:10px;
+    background:#f3efe5 url(src/bg.jpg) 0 0 no-repeat;
+}
+.CaptionClass{
+    font-weight:bold;
+}
+.onOverClass{
+    border-top:#D6D9DE solid 1px;
+    background-color:#ECEEF4;
+}
+.onOutClass{
+    border-top:#D6D9DE solid 1px;
+    background-color:#ffffff;
+}
+.onClickClass{
+    border:#eadfc0 solid 1px;
+    background-color:#eadfc0;
+    color:#333;
+}
+.hscClickClass{
+    background-color:#333;
+    color:#FFFFFF;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+}
+.hscOutClass{
+    color:#FFF;
+    background-color:#ba7f75;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+}
+
+
+.area{
+}
+
+#container{
+    overflow:hidden;
+    width:720px;
+    margin:10px auto;
+}
+#Menu{
+    width:180px;
+    float:left;
+    overflow:hidden;
+    background:#FFF;
+    border:1px solid #CCC;
+    padding:0 0 3px 0
+}
+#Menu ul{
+    margin:0 auto;
+    padding:0;
+    width:95%;
+}
+#Menu ul li.CaptionClass{
+    text-align:center;
+    padding:10px 0;
+}
+
+#ajaxContent{
+    float:right;
+    width:460px;
+    padding:10px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+#ajaxContent p{line-height:180%;}
+a:link,
+a:visited{color:#708d95;}
+a:hover{color:#F60;}
+
+#ajaxContent h2{
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-weight:normal;
+    font-style:italic;
+    font-size:35px;
+    letter-spacing:-2px;
+    text-shadow: rgba(255,255,255,0.9) 2px 1px 0;
+    margin:0 0 10px 0;
+    padding:0 0 10px 0;
+    border-bottom:1px dotted #CCC;
+}
+
+.center a img{border:none; margin:0 2px}
+.center{text-align:center;}
+
+ul.blogroll{
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+ul.blogroll li{
+    width:28%;
+    float:left;
+    padding:3px 0 3px 20px;
+    background:url(src/link.png) left no-repeat;
+}
+
+.alert{
+    background:#FFC url(src/alert.png) 5px 4px no-repeat;
+    padding:5px 5px 5px 25px;
+    border:1px solid #FC6;
+}
+
+form label{
+    float:left;
+    width:50px;
+    text-align:right;
+    margin:3px 10px 0 0;
+    font-weight:bold;
+}
+form p{
+    overflow:hidden;
+    padding:5px 0;
+    line-height:normal;
+}
+form p.rBtn{text-align:center;}
+form input,
+form select,
+form textarea{
+    font-size:11px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:3px;
+    border:1px solid #CCC;
+    background-color:#EEE;
+    width:69%;
+}
+form input#send{background-color:#333; color:#FFF; text-transform:uppercase; font-weight:bold; cursor:pointer; border:none;}
+
+ul.messages{overflow:hidden;
+            padding:0;
+            margin:0;
+            list-style:none;}
+ul.messages li{
+    padding:10px 10px 10px 30px;
+    background:url(src/mail.png) no-repeat 5px 10px;
+    border-bottom:1px dotted #CCC;
+}
+ul.messages li.alt{background-color:#EEE;}
+
+ul.messages li strong{font-weight:bold; display:block; margin:0 0 5px 0}
+ul.messages li small{font-size:10px; font-family:Tahoma, Geneva, sans-serif;  color:#999; margin:0 10px 0 0;}
+ul.messages li small span{font-weight:bold;}
+

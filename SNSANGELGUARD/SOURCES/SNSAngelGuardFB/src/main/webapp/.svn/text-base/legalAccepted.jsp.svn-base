@@ -1,0 +1,90 @@
+<%--
+    Document   : legalAccepted
+    Created on : 20-dic-2010, 13:36:31
+    Author     : tote
+--%>
+
+<%@page import="es.uah.cc.ie.sources.SNSdataBaseIntegrator"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+            //Obtenemos la conexión a Facebook
+            SNSdataBaseIntegrator snsDB = SNSdataBaseIntegrator.getSessionInstance(request);
+            snsDB.logSession(request, response);
+            //snsDB.getLoginFacebook(request, response);
+            System.out.println("LGLACCEP: OBJETO ID: " + snsDB.getUserSettings().getUid());
+            System.out.println("LGLACCEP: NUEVA CONEXION: " + snsDB.isNewConnection());
+            System.out.println("LGLACCEP: ACCEPTING TERM: " + snsDB.getLocaleSettings().getAcceptingTerms());
+
+            String[] menLoader = snsDB.getLocaleSettings().stringToArray(snsDB.getLocaleSettings().getWarnings());
+
+            String menSave = menLoader[3];
+            String menWait = menLoader[4];
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title><%=snsDB.getLocaleSettings().getTitleAT()%></title>
+
+        <!--import css -->
+        <link rel="stylesheet" type="text/css" href="Styles/facebook.css" />
+        <link rel="stylesheet" type="text/css" href="Styles/jquery.loader.css" />
+
+        <!--import jquery lib -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/utilidadesFormularios.js"></script>
+        <script type="text/javascript" src="js/jquery.loader.js"></script>
+
+    </head>
+    <body>
+        <form id="frLegalAccepted" action="">
+            <input type="hidden" id="newConection" name="newConection" value="0" />
+            <input type="hidden" id="ok" name="ok" value="0" />
+            <div id="legalAccepted">
+                <center>
+                    <div id="contenido" style="width:97%;" >
+                        <h1 class="titulo"><%=snsDB.getLocaleSettings().getTitleAT()%></h1>
+                        <table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td width="10%">
+                                    <img src="http://oe.dynalias.net:8080/SNSAngelGuardFB/resources/icono.gif" WIDTH="83" HEIGHT="111" alt="">
+                                </td>
+                                <td width="80%">
+                                    <h1 class="aceptinTerms"><%=snsDB.getLocaleSettings().getAcceptingTerms()%></h1>
+                                </td>
+                                <td width="10%">
+                                    <img src="http://oe.dynalias.net:8080/SNSAngelGuardFB/resources/icono2.gif" WIDTH="83" HEIGHT="111" alt="">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="acuerdoLegal">
+                            <h1 class="acuerdoLegal"><%=snsDB.getLocaleSettings().getLegalAccepted()%></h1>
+                        </div>
+                        <div id="botoneraInferior" style="width:80%;" align="left" margin="15px">
+                            <hr class="linea">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" class="boton" name="btnCancel" value="<%=snsDB.getLocaleSettings().getBtnCancelAT()%>"
+                                               onclick="removeApp();"/>
+                                    </td>
+                                    <td>
+                                        <input type="button" class="boton" id="btnIagree" name="btnIagree" value="<%=snsDB.getLocaleSettings().getBtnAgreeAT()%>"
+                                               onclick="muestraLoader('<%= menSave %>','<%= menWait %>'); enviarFormularioLegalA('settingsSNSAngelGuard.jsp');"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </form>
+    </body>
+</html>

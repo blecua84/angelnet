@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>FacebookClientLocal$FacebookLoginServlet</servlet-name>
+        <servlet-class>es.uah.cc.ie.snsangelguardfb.facebookclient.clients.FacebookClientLocal$FacebookLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FacebookClientLocal$FacebookCallbackServlet</servlet-name>
+        <servlet-class>es.uah.cc.ie.snsangelguardfb.facebookclient.clients.FacebookClientLocal$FacebookCallbackServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Log4jInit</servlet-name>
+        <servlet-class>es.uah.cc.ie.snsangelguardfb.sources.logs.Log4jInit</servlet-class>
+        <init-param>
+            <param-name>log4j-init-file</param-name>
+            <param-value>WEB-INF/log4j.properties</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>HarvestedSNS</servlet-name>
+        <servlet-class>es.uah.cc.ie.snsangelguardfb.sources.offline.HarvestedSNS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacebookClientLocal$FacebookLoginServlet</servlet-name>
+        <url-pattern>/FacebookLoginServlet/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FacebookClientLocal$FacebookCallbackServlet</servlet-name>
+        <url-pattern>/FacebookCallbackServlet/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Log4jInit</servlet-name>
+        <url-pattern>/Log4jInit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HarvestedSNS</servlet-name>
+        <url-pattern>/harvestedSNS</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>securedapp</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+</web-app>

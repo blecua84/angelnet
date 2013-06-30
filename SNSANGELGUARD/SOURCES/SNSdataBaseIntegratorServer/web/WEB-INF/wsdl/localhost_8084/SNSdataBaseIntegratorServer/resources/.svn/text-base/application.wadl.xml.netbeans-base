@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://research.sun.com/wadl/2006/10">
+    <doc xmlns:jersey="http://jersey.dev.java.net/" jersey:generatedBy="Jersey: 1.1.5.1 03/10/2010 02:33 PM"/>
+    <resources base="http://localhost:8080/SNSdataBaseIntegratorServer/resources/">
+        <resource path="/workHistoryFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM WorkHistoryFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idWorkHistoryFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idWorkHistoryFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocialhasOrganizationopenSocialSCHOOLSs/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocialhasOrganizationopenSocialSCHOOLS e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{useropenSocialiduseropenSocial},{organizationopenSocialidOrganizationopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="useropenSocialiduseropenSocial"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="organizationopenSocialidOrganizationopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/commentsFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM CommentsFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idCommentsFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idCommentsFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/meetingSexFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM MeetingSexFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idMeetingSexFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idMeetingSexFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/friendsFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM FriendsFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{userUid}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="userUid"/>
+            </resource>
+        </resource>
+        <resource path="/likesFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM LikesFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idLikesFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idLikesFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/smokeropenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM SmokeropenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idSmokeropenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idSmokeropenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/actionLinksFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM ActionLinksFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idActionLinksFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idActionLinksFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/genderopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM GenderopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idGenderopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idGenderopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/relationshipFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM RelationshipFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idRelationshipFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idRelationshipFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/messageTypeopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM MessageTypeopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idMessageTypeopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idMessageTypeopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocialhasFriendsopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocialhasFriendsopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{useropenSocialiduseropenSocial},{friendsopenSocialUSERID}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="useropenSocialiduseropenSocial"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="friendsopenSocialUSERID"/>
+            </resource>
+        </resource>
+        <resource path="/affiliationsFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM AffiliationsFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idAffiliationsFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idAffiliationsFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/organizationopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM OrganizationopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idOrganizationopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idOrganizationopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/userSettingss/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UserSettings e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{uid}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="uid"/>
+            </resource>
+        </resource>
+        <resource path="/familyFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM FamilyFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idFamilyFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idFamilyFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/privacyFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM PrivacyFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idPrivacyFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idPrivacyFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/urlopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UrlopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idurlopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idurlopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocialhasurlopenSocialPROFILESONGSs/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocialhasurlopenSocialPROFILESONGS e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{useropenSocialiduseropenSocial},{urlopenSocialidurlopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="useropenSocialiduseropenSocial"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="urlopenSocialidurlopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/emailopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM EmailopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idEmailopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idEmailopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/presenceopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM PresenceopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idPresenceopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idPresenceopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/locationFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM LocationFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idLocationFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idLocationFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/streamFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM StreamFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{postId}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="postId"/>
+            </resource>
+        </resource>
+        <resource path="/userFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UserFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idUserFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idUserFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/addressopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM AddressopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idAddressopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="idAddressopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/meetingForFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM MeetingForFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idMeetingForFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idMeetingForFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/sampleLikesFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM SampleLikesFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idSampleLikesFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idSampleLikesFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/friendsopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM FriendsopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{userId}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="userId"/>
+            </resource>
+        </resource>
+        <resource path="/phonesopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM PhonesopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idPhonesopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idPhonesopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/friendsLikesFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM FriendsLikesFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idFriendsLikesFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idFriendsLikesFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/drinkeropenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM DrinkeropenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idDrinkeropenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idDrinkeropenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/nameopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM NameopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idNameopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idNameopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/educationHistoryFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM EducationHistoryFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idEducationHistoryFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idEducationHistoryFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/locationfacebookhasuserfacebookCURRENTLOCATIONs/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM LocationfacebookhasuserfacebookCURRENTLOCATION e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{locationFacebookIdLocationFacebook},{userFacebookIdUserFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="locationFacebookIdLocationFacebook"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="userFacebookIdUserFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/typeAffiliationsFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM TypeAffiliationsFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idTypeAffiliationsFacebook}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idTypeAffiliationsFacebook"/>
+            </resource>
+        </resource>
+        <resource path="/messageopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM MessageopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idMessageopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idMessageopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocialhasOrganizationopenSocialJOBSs/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocialhasOrganizationopenSocialJOBS e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{useropenSocialiduseropenSocial},{organizationopenSocialidOrganizationopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="useropenSocialiduseropenSocial"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="organizationopenSocialidOrganizationopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocialhasNameopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocialhasNameopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{useropenSocialiduseropenSocial},{nameopenSocialidNameopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="useropenSocialiduseropenSocial"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="nameopenSocialidNameopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/useropenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM UseropenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{iduseropenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="iduseropenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/lookingForopenSocials/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM LookingForopenSocial e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{idLookingForopenSocial}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="idLookingForopenSocial"/>
+            </resource>
+        </resource>
+        <resource path="/users/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM User e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{uid}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="uid"/>
+            </resource>
+        </resource>
+        <resource path="/commentFacebooks/">
+            <method name="GET" id="get">
+                <request>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="start"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="10" type="xs:int" style="query" name="max"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="1" type="xs:int" style="query" name="expandLevel"/>
+                    <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="SELECT e FROM CommentFacebook e" type="xs:string" style="query" name="query"/>
+                </request>
+                <response>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method name="POST" id="post">
+                <request>
+                    <representation mediaType="application/xml"/>
+                    <representation mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{xid}/">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="xid"/>
+            </resource>
+        </resource>
+    </resources>
+</application>

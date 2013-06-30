@@ -1,0 +1,63 @@
+10
+
+dir
+0
+http://ie.cc.uah.es/svn/SNSAngelGuardFB/src/main/java/es/uah/cc/ie/SNSAngelGuardFB/sources/filtersfuncionality
+http://ie.cc.uah.es/svn
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6d37458e-68a7-4d47-a0d1-ca6b45941646
+
+FriendsFilterFuncionality.java
+file
+
+
+
+add
+
+GenericFilterFuncionality.java
+file
+
+
+
+add
+
+PrivacyFilterFuncionality.java
+file
+
+
+
+add
+
+WallFilterFuncionality.java
+file
+
+
+
+add
+
+VisitsFilterFuncionality.java
+file
+
+
+
+add
+

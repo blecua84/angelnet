@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+h1.tituloMed{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:15px;
+    color: #3b5998;
+    margin:5px;
+}
+
+#jquery-loader{
+	border:2px black solid;
+	padding-top:35px;
+	background-color: white;
+	text-align: center;
+}
+#jquery-loader-background{background-color: black}
+#jquery-loader.blue-with-image{
+	border:2px black solid;
+	padding-top:35px;
+	background-color: white;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#jquery-loader.blue-with-image-2{
+	border:none;
+	padding-top:35px;
+	background-color: transparent;
+	text-align: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

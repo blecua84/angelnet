@@ -1,0 +1,210 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package es.uah.cc.ie.sources;
+
+import bsh.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+/**
+ *
+ * @author tote
+ */
+public class settingsFilter {
+
+    private String uid;
+    private String frec;
+    private String angels;
+    private String active;
+    private String uidProp;
+    private Date lastCheck;
+    private String context = "http://oe.dynalias.net:8080/";
+
+    public settingsFilter(String uid, String frec, String angels, String active, String uidProp, Date lastCheck) {
+        this.uid = uid;
+        this.frec = frec;
+        this.angels = angels;
+        this.active = active;
+        this.uidProp = uidProp;
+        this.lastCheck = lastCheck;
+    }
+
+    public settingsFilter() {
+    }
+
+    /**
+     * @return the uid
+     */
+    public String getUid() {
+        return uid;
+    }
+
+    /**
+     * @param uid the uid to set
+     */
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    /**
+     * @return the frec
+     */
+    public String getFrec() {
+        return frec;
+    }
+
+    /**
+     * @param frec the frec to set
+     */
+    public void setFrec(String frec) {
+        this.frec = frec;
+    }
+
+    /**
+     * @return the angels
+     */
+    public String getAngels() {
+        return angels;
+    }
+
+    /**
+     * @param angels the angels to set
+     */
+    public void setAngels(String angels) {
+        this.angels = angels;
+    }
+
+    /**
+     * @return the active
+     */
+    public String getActive() {
+        return active;
+    }
+
+    /**
+     * @param active the active to set
+     */
+    public void setActive(String active) {
+        this.active = active;
+    }
+
+    /**
+     * @return the uidProp
+     */
+    public String getUidProp() {
+        return uidProp;
+    }
+
+    /**
+     * @param uidProp the uidProp to set
+     */
+    public void setUidProp(String uidProp) {
+        this.uidProp = uidProp;
+    }
+
+    /**
+     * @return the lastCheck
+     */
+    public Date getLastCheck() {
+        return lastCheck;
+    }
+
+    /**
+     * @param lastCheck the lastCheck to set
+     */
+    public void setLastCheck(Date lastCheck) {
+        this.lastCheck = lastCheck;
+    }
+
+    public Date formatTime(String strTime) throws ParseException, java.text.ParseException {
+        Date time = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        time = sdf.parse(strTime);
+        return time;
+    }
+
+    public JSONObject getObjectFilter(String desFiltro) throws JSONException {
+        JSONObject newObject = new JSONObject();
+        JSONObject jsonUri = new JSONObject();
+
+        newObject.put("userSettingsUid", this.getUid());
+        newObject.put("frec" + desFiltro, this.getFrec());
+        newObject.put("active" + desFiltro, this.getActive());
+        newObject.put("lastCheck", "");
+
+        jsonUri.put("@uri", this.getContext() + "SNSdataBaseIntegratorServer/resources/userSettingss/" + this.getUid() + "/");
+        newObject.put("userSettings", jsonUri);
+
+        return newObject;
+    }
+
+    public JSONArray getAngelsFilter(String[][] arrayAngels) throws JSONException {
+        String[] arrayAngelsFilter = this.getAngels().split(";");
+        JSONArray jsonAngelsFilter = new JSONArray();
+        JSONObject jsonDatesAngel = null;
+
+        for (int i = 0; i < arrayAngelsFilter.length; i++) {
+            for (int j = 0; j < arrayAngels.length; j++) {
+                if (arrayAngelsFilter[i].equals(arrayAngels[j][0])) {
+                    jsonDatesAngel = new JSONObject();
+                    jsonDatesAngel.put("idAngel", arrayAngels[j][0]);
+                    jsonDatesAngel.put("nameAngel", arrayAngels[j][1]);
+                    jsonDatesAngel.put("imgAngel", arrayAngels[j][2]);
+                    jsonDatesAngel.put("typeAngel", arrayAngels[j][3]);
+                    jsonDatesAngel.put("acceptAngel", "0");
+                    jsonDatesAngel.put("userPropAngel", this.getUidProp());
+                    jsonAngelsFilter.put(jsonDatesAngel);
+                }
+            }
+        }
+        System.out.println("ANGELES SELECCIONADOS: " + jsonAngelsFilter.toString());
+        return jsonAngelsFilter;
+    }
+
+    public void loadSettingsFilter(JSONObject jsonFilter, JSONArray jsonArrayAngels, String des) throws JSONException, ParseException, java.text.ParseException {
+        this.setUid(jsonFilter.getString("userSettingsUid"));
+        this.setFrec(jsonFilter.getString("frec" + des));
+        this.setActive(jsonFilter.getString("active" + des));
+        this.setUidProp(jsonFilter.getString("userSettingsUid"));
+        this.setLastCheck(formatTime(jsonFilter.getString("lastCheck").replace("T", " ")));
+        if (this.getActive().equals("1")) {
+            loadAngelsFilter(jsonArrayAngels);
+        }
+    }
+
+    public void loadAngelsFilter(JSONArray jsonArrayAngels) throws JSONException {
+        JSONObject jsonAngel = null;
+        String lstAngels = "";
+        if (jsonArrayAngels.length() != 0) {
+            for (int i = 0; i < jsonArrayAngels.length(); i++) {
+                jsonAngel = jsonArrayAngels.getJSONObject(i);
+                if (i == 0) {
+                    lstAngels = jsonAngel.getString("idAngel") + ";";
+                } else {
+                    lstAngels += jsonAngel.getString("idAngel") + ";";
+                }
+            }
+        }
+
+        this.setAngels(lstAngels);
+    }
+
+    /**
+     * @return the context
+     */
+    public String getContext() {
+        return context;
+    }
+
+    /**
+     * @param context the context to set
+     */
+    public void setContext(String context) {
+        this.context = context;
+    }
+}

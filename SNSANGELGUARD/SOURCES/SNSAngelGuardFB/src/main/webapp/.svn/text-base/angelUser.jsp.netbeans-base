@@ -1,0 +1,110 @@
+<%-- 
+    Document   : angelUser
+    Created on : 02-may-2011, 12:29:00
+    Author     : tote
+--%>
+
+<%@page import="es.uah.cc.ie.SNSWebServicesClient.SNSdataBaseClient"%>
+<%@page import="org.codehaus.jettison.json.JSONObject"%>
+<%@page import="es.uah.cc.ie.sources.SNSdataBaseIntegrator"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+            //Obtenemos la conexión a Facebook
+            SNSdataBaseIntegrator snsDB = SNSdataBaseIntegrator.getSessionInstance(request);
+            snsDB.getLoginAppOffline(request, response);
+            snsDB.setClient(new SNSdataBaseClient());
+
+            String uidPublic = request.getParameter("par1");
+
+            // Obtener información de userSettings por su uidPublic
+            JSONObject jsonUser = snsDB.getJsonUserByUidPublic(uidPublic);
+            System.out.println("JSON USER ANGEL: " + jsonUser.toString());
+
+            snsDB.loadUserConnected(jsonUser);
+            snsDB.loadLocaleSettings();
+
+            String nameUser = jsonUser.getString("userName");
+            String srcImg = snsDB.getImgUser(jsonUser.getString("uid"));
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+
+        <title><%=snsDB.getLocaleSettings().getTitleAngUser()%></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+        <link type="text/css" rel="stylesheet" href="Styles/facebook.css" />
+
+        <script type="text/javascript" charset="ISO-8859-1" src="js/utilidadesFormularios.js"></script>
+    </head>
+    <body >
+        <form id="frAngeUser" action="" method="">
+            <div id="divAngelUserContainer" class="divAngelUserContainer">
+                <center>
+                    <table width="95%">
+                        <tr>
+                            <td>
+                                <div id="divAngelUserTitle">
+                                    <table width="100%">
+                                        <tr>
+                                            <td width="90%">
+                                                <h1 class="tituloMed"><%=snsDB.getLocaleSettings().getTitleAngUser()%></h1>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="90%">
+                                                <hr class="linea" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="divAngelUser" class="divAngelUser">
+                                    <center>
+                                        <table id="tabUserInformation" class="tabCenter">
+                                            <tr>
+                                                <td width="35%" align="center">
+                                                    <img src="<%= srcImg%>" alt="">
+                                                </td>
+                                                <td width="65%">
+                                                    <h1 class="aceptinTerms"> <%= nameUser%>
+                                                    </h1>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </center>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="botoneraInferior" align="right" margin="15px">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                                <hr class="linea" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <input type="button" class="boton" name="btnCerrar" value="<%=snsDB.getLocaleSettings().getBtnCloseAngUser()%>"
+                                                       onclick="cerrarVentana();"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </form>
+    </body>
+</html>

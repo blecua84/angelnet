@@ -1,0 +1,1594 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+var arrayAngelsVig = '';
+var context = "http://oe.dynalias.net:8080/";
+
+function enviarFormularioIndex(destino)
+{
+    document.getElementById('frIndice').setAttribute("action", destino);
+    document.getElementById('frIndice').submit();
+}
+
+function enviarFormularioLegalA(destino){
+    if(destino == "settingsSNSAngelGuard.jsp"){
+        document.getElementById('frLegalAccepted').setAttribute("action", destino);
+        document.getElementById('frLegalAccepted').setAttribute('method','post');
+        document.getElementById('frLegalAccepted').submit();
+    }
+    else{
+        document.getElementById('frLegalAccepted').setAttribute("action", "final.jsp");
+        document.getElementById('frLegalAccepted').submit();
+    }
+}
+
+function mostrarMenOk(newConection, ok, mensaje){
+    if((newConection == '1') && (ok == '1')){
+        alert(mensaje);
+    }
+}
+
+function enviarFormularioUserDates(){
+
+    if(document.getElementById('chkCtrAmigos').checked)
+        chkFriendsAct = "1";
+    else
+        chkFriendsAct = "0";
+
+    if(document.getElementById('chkCtrMuro').checked)
+        chkWallAct = "1";
+    else
+        chkWallAct = "0";
+    
+    txtNameTutor = document.getElementById('txtNomTutor').value;
+    txtEmailTutor = document.getElementById('txtEmailTutor').value;
+    txtTimeRefresh = document.getElementById('lstTimeRefresh').value;
+
+    if(document.getElementById('chkAppActiva').checked)
+        chkAppAct = "1";
+    else
+        chkAppAct = "0";
+    
+    window.location= context + "SNSAngelGuardFB/checkNow.jsp"
+    +"?chkFriendsAct="+chkFriendsAct
+    +"&chkCtrMuro="+chkWallAct
+    +"&txtNomTutor="+txtNameTutor
+    +"&txtEmailTutor="+txtEmailTutor
+    +"&lstTimeRefresh="+txtTimeRefresh
+    +"&chkAppActiva="+chkAppAct;
+}
+
+function activarChkAppAct(){
+    if(document.getElementById('chkCtrAmigos').checked || document.getElementById('chkCtrMuro').checked){
+        document.getElementById('appAct').className = 'h1v';
+        document.getElementById('chkAppActiva').checked = true;
+    }
+
+    else
+    {
+        document.getElementById('appAct').className = 'h1r';
+        document.getElementById('chkAppActiva').checked = false;
+    }
+}
+
+function accentCorrect(strCadena){
+    
+}
+
+function removeApp(){
+    window.location="http://www.facebook.com/settings/?tab=privacy#!/settings/?tab=applications";
+}
+
+function cargarListaAngels(arrayAngels,strSubAng){
+    var strLista;
+    if((arrayAngels.toString().substring(0,1) == "[") &&
+        (arrayAngels.toString().substring(arrayAngels.toString().length - 1,arrayAngels.toString().length) == "]")) {
+        var auxArray = arrayAngels.toString().substring(1,arrayAngels.toString().length - 1);
+        arrayAngels = auxArray;
+
+        var angels = arrayAngels.split(';');
+        for(var i=0;i<angels.length;i++){
+            var strAngels = angels[i].toString();
+            if((strAngels.substring(0,1) == "[") &&
+                (strAngels.substring(strAngels.length - 1,strAngels.length) == "]")) {
+                var auxAngels = strAngels.substring(1,strAngels.length - 1);
+                var angelDates = auxAngels.split(',');
+
+                var li = document.createElement("li");
+                li.className = "";
+
+                strLista =
+                '<table><tr><td width="30%" style="vertical-align:top;"><img src="' + angelDates[2] + '" \/></td>' +
+                '<td width="70%" style="vertical-align:top;"><strong>' + angelDates[1] +' </strong><br \/>'+
+                '<span class="fcbkitem_text">' + strSubAng + '</span></td></tr>' +
+                '</table><input type="hidden" id="fcbklist_value[]" value="' + angelDates[0]+ '" \/>';
+
+                li.innerHTML = strLista;
+                var ul = document.getElementById("fcbklist");
+                ul.appendChild(li);
+            }
+        }
+    }
+}
+
+function cargarListaVig(strFbList){
+    var array = strFbList.split(";");
+
+    $(document).ready(function() {
+        //id(ul id),width,height(element height),row(elements in row)
+        $.fcbkListSelection("#fcbklist","450","50","2",array[0],array[1],array[2]);
+    });
+}
+
+var vent = null;
+var miVentana;
+
+function lanzarModal(url, ancho, alto) {
+    //muestraLoaderSin();
+
+    if(navigator.userAgent.toLowerCase().indexOf('chrome') != -1){
+        alto = alto + 40;
+    }
+
+    var value = 'no';
+    var settings;
+
+    settings = "";
+    settings += "toolbar=" + value + ",";
+    settings += "scrollbars=" + value + ",";
+    settings += "location=" + value +  ",";
+    settings += "status=" + value + ",";
+    settings += "menubar=" + value + ",";
+    settings += "resizeable=" + value + ",";
+    settings += "width=" + ancho + ",";
+    settings += "height=" + alto;
+    settings += "modal=" + "yes";
+    var top = (screen.height - alto)/2;
+    var center = (screen.width - ancho)/2;
+
+    miVentana = window.open(url,"popup",settings);
+    miVentana.moveTo(center,top);
+
+    miVentana.focus();
+
+    return miVentana;
+}
+
+function lanzarModalAyuda(url, ancho, alto) {
+    //muestraLoaderSin();
+
+    if(navigator.userAgent.toLowerCase().indexOf('chrome') != -1){
+        alto = alto + 40;
+    }
+
+    var value = 'no';
+    var settings;
+
+    settings = "";
+    settings += "toolbar=" + value + ",";
+    settings += "scrollbars=" + "yes" + ",";
+    settings += "location=" + value +  ",";
+    settings += "status=" + value + ",";
+    settings += "menubar=" + value + ",";
+    settings += "resizeable=" + value + ",";
+    settings += "width=" + ancho + ",";
+    settings += "height=" + alto;
+    settings += "modal=" + "yes";
+    var top = (screen.height - alto)/2;
+    var center = (screen.width - ancho)/2;
+
+    miVentana = window.open(url,"popup",settings);
+    miVentana.moveTo(center,top);
+
+    miVentana.focus();
+
+    return miVentana;
+}
+
+function controlModal()
+{
+    if (window.showModalDialog){
+        window.opener.focus = false;
+        self.focus();
+    }
+}
+
+function parentDisable(){
+    window.opener.document.body.disabled=true;
+}
+
+function parentAble(){
+    window.opener.document.body.disabled=false;
+}
+
+function deshabilitarBoton(idBoton){
+    document.getElementById(idBoton).className = "botonDisabled";
+}
+
+function habilitarBoton(idBoton){
+    document.getElementById(idBoton).className = "boton";
+}
+
+function limpiarLista(longitud){
+    for(var i = 0;i < longitud; i++){
+        var elemento = document.getElementById('contact'+i);
+        if(elemento){
+            document.getElementById('contact'+i).className = 'pijama1';
+            document.getElementById('rdContact'+i).checked = false;
+        }
+    }
+}
+
+function activaFila(pos){
+    if(document.getElementById('contact'+ pos)){
+        document.getElementById('contact'+ pos).className = 'pijama2';
+        document.getElementById('rdContact'+ pos).checked = true;
+    }
+}
+
+function loadLstModal(arrayAngels){
+    var tabla = document.getElementById('tabContacts');
+    var nameElement = '';
+    var emailElement = '';
+    var angel = '';
+    var nameAngel = '';
+    var emailAngel = '';
+
+    for(var i=0;i<tabla.rows.length;i++){
+        nameElement = tabla.rows[i].cells[1].innerHTML;
+        emailElement = tabla.rows[i].cells[2].innerHTML;
+
+        for(var j=0;j<arrayAngels.length - 1;j++){
+            angel = arrayAngels[j].split(",");
+            if(angel[0].split(":") == false){
+                formatNameSp(arrayAngels[i]);
+            }
+            nameAngel = angel[0].split(":");
+            emailAngel = angel[1].split(":");
+
+            if((formatName(nameAngel[1]).indexOf(nameElement) != -1) && (formatName(emailAngel[1]).indexOf(emailElement) != -1)){
+                activaFila(i);
+            }
+        }
+    }
+}
+
+function cargarInicioModal(){
+    var arrayAngels = '';
+    
+    document.getElementById('hdAngelsGoogleSelected').value = window.opener.document.getElementById('hdAngelsGoogleSelected').value;
+    if(document.getElementById('hdAngelsGoogleSelected').value != ''){
+        arrayAngels = (document.getElementById('hdAngelsGoogleSelected').value).split(";");
+        loadLstModal(arrayAngels);
+    }
+}
+
+function getJsonIdValue(jsonObject,type){
+    var jsonObjectArray = jsonObject.split(",");
+    var jsonValue;
+
+    if(type=='name'){
+        jsonValue = (jsonObjectArray[0]).split(":");
+    }else if(type=='email'){
+        jsonValue = (jsonObjectArray[1]).split(":");
+    }
+
+    return formatName(jsonValue[1]);
+}
+
+function delToJsonAngels(nameAddress,des){
+    var angelsSelected = (document.getElementById('hdAngels' + des).value).split(";");
+    var auxAngelSelected = '';
+    var angel = '';
+    var nameAngel = '';
+    var auxName = '';
+
+    for(var i=0;i<angelsSelected.length - 1;i++){
+        angel = angelsSelected[i].split(",");
+        nameAngel = angel[0].split(":");
+
+        auxName = formatName(nameAngel[1]);
+        if(auxName.indexOf(nameAddress) == -1){
+            if(auxAngelSelected == ''){
+                auxAngelSelected = angelsSelected[i] + ';';
+            }else{
+                auxAngelSelected += angelsSelected[i] + ';';
+            }
+        }
+    }
+    document.getElementById('hdAngels' + des).value = auxAngelSelected;
+}
+
+function addToJsonAngels(nameAddress,emailAddress,des){
+    var angelsSelected = document.getElementById('hdAngels' + des).value;
+
+    if(angelsSelected == ''){
+        angelsSelected = '{' +'\"nameAngel'+ des +'\":' + '\"'+ formatNameComa(nameAddress) +'\", ' + '\"emailAngel'+ des +'\":' + '\"'+ emailAddress +'\"' +'};';
+    }else{
+        angelsSelected += '{' +'\"nameAngel'+ des +'\":' + '\"'+ formatNameComa(nameAddress) +'\", ' + '\"emailAngel'+ des +'\":' + '\"'+ emailAddress +'\"' +'};';
+    }
+    document.getElementById('hdAngels'+ des).value = angelsSelected;
+}
+
+function delItemLstJsonAngels(){
+    var tabAngelsEd = document.getElementById('tabFriendsImport');
+    var nameAngel = '';
+    var emailAngel = '';
+
+    // Se guarda la lista de angeles anterior
+    document.getElementById('hdAngelsEdAux').value = document.getElementById('hdAngelsEd').value;
+
+    // Se inicializa la lista de angeles.
+    document.getElementById('hdAngelsEd').value = '';
+
+    // Se empiezan a introducir aquellos angeles distintos de vacío.
+    for(var i=0;i<tabAngelsEd.rows.length;i++){
+        if(document.getElementById('txtNameTutorEd' + i) && document.getElementById('txtEmailTutorEd' + i)){
+            nameAngel = document.getElementById('txtNameTutorEd' + i).value;
+            emailAngel = document.getElementById('txtEmailTutorEd' + i).value;
+            if(nameAngel != '' && emailAngel != ''){
+                addToJsonAngels(nameAngel,emailAngel,'Ed');
+            }
+        }
+    }
+}
+
+function buscarBorrados(desFiltro){
+    var encontrado = false;
+    var angelsEdAux = (document.getElementById('hdAngels'+ desFiltro +'Aux').value).split(";");
+    var angelsEd = (document.getElementById('hdAngels' + desFiltro).value).split(";");
+    var aux = "";
+    var angel = "";
+    var addresAngel = "";
+    var addres = "";
+    var angelEd = "";
+    var addresAngelEd = "";
+    var addresEd = "";
+
+    for(var i = 0;i < angelsEdAux.length - 1; i++){
+        encontrado = false;
+        angel = angelsEdAux[i].split(",");
+        addresAngel = angel[1].split(":");
+        addres = formatName(addresAngel[1]);
+        for(var j = 0; j < angelsEd.length - 1; j++){
+            angelEd = angelsEd[j].split(",");
+            addresAngelEd = angelEd[1].split(":");
+            addresEd = formatName(addresAngelEd[1]);
+            if(addresEd.indexOf(addres) != -1){
+                encontrado = true;
+                break;
+            }
+        }
+        
+        if(encontrado == false){
+            if(aux == ""){
+                aux = angelsEdAux[i] + ";";
+            }else{
+                aux = aux + angelsEdAux[i] + ";";
+            }
+        }
+    }
+    
+    document.getElementById('hdAngels'+ desFiltro +'Aux').value = aux;
+}
+
+function borrarContactGoogle(){
+    var deshabilitar = true;
+
+    buscarBorrados('GoogleSelected');
+    borrarItems('GoogleSelected');
+
+    pintarTablaConGoogle(document.getElementById('hdAngelsGoogleSelected').value,'');
+
+    if(deshabilitar){
+        deshabilitarBoton('btnDelContact');
+    }
+    else{
+        habilitarBoton('btnDelContact');
+    }
+    habilitarGuardar();
+}
+
+function habilitarBorrar(){
+    var tabla = document.getElementById('tabContacts');
+    var deshabilitar = true;
+
+    if(tabla.innerHTML != ''){
+        for(var i=0;i<tabla.rows.length;i++){
+            if(document.getElementById('rdContact'+ i)){
+                if(document.getElementById('rdContact'+ i).checked == true){
+                    deshabilitar = false;
+                    break;
+                }
+            }
+        }
+    }
+    
+    if(deshabilitar){
+        deshabilitarBoton('btnDelContact');
+    }else{
+        habilitarBoton('btnDelContact');
+    }
+
+}
+
+function seleccionarFilaGoogle(elemento,radio,nameAddress,emailAddress){
+    // Test if the element is selected
+    if(document.getElementById(elemento).className == 'pijama1'){
+        document.getElementById('hdAngelsGoogleSelectedAux').value = document.getElementById('hdAngelsGoogleSelected').value;
+        delToJsonAngels(nameAddress,'GoogleSelected');
+
+        document.getElementById(radio).checked = true;
+        document.getElementById(elemento).className = 'pijama2';
+
+        habilitarBorrar();
+    }else{
+        addToJsonAngels(nameAddress,emailAddress,'GoogleSelected');
+
+        document.getElementById(radio).checked = false;
+        document.getElementById(elemento).className = 'pijama1';
+
+        habilitarBorrar();
+    }
+}
+
+function borrarItemEdFiltro(idElemento, desFiltro){
+    if((document.getElementById('hdAngels' + desFiltro).value != '') && (document.getElementById('hdAngels' + desFiltro).value != 'null')){
+        var lstFiltro = (document.getElementById('hdAngels' + desFiltro).value).split(";");
+        var aux = '';
+
+        for(var i = 0 ; i < lstFiltro.length - 1; i++){
+            if(lstFiltro[i] == idElemento){
+                if(i == 0){
+                    aux = lstFiltro[i] + ";";
+                }else{
+                    aux = aux + lstFiltro[i] + ";";
+                }
+            }
+        }
+
+        document.getElementById('hdAngels' + desFiltro).value = aux;
+    }
+}
+
+function comprobarAceptar(){
+    if(document.getElementById('hdAngelsGoogleSelected').value == ''){
+        deshabilitarBoton('btnAceptar');
+    }else{
+        habilitarBoton('btnAceptar');
+    }
+}
+
+function seleccionarFila(elemento,radio,nameAddress,emailAddress){
+    // Test if the element is selected
+    if(document.getElementById(elemento).className == 'pijama2'){
+        delToJsonAngels(nameAddress,'GoogleSelected');
+
+        document.getElementById(radio).checked = false;
+        document.getElementById(elemento).className = 'pijama1';
+
+        if(document.getElementById('hdAngelsGoogleSelected').value == ''){
+            deshabilitarBoton('btnAceptar');
+        }
+    }else{
+        addToJsonAngels(nameAddress,emailAddress,'GoogleSelected');
+
+        document.getElementById(radio).checked = true;
+        document.getElementById(elemento).className = 'pijama2';
+
+        habilitarBoton('btnAceptar');
+    }
+}
+
+function formatName(nameContact){
+    if(nameContact.indexOf('{') != -1){
+        nameContact = nameContact.replace(/{/g,"");
+    }
+
+    if(nameContact.indexOf('}') != -1){
+        nameContact = nameContact.replace(/}/g,"");
+    }
+
+    if(nameContact.indexOf('"') != -1){
+        nameContact =nameContact.replace(/"/g,"");
+    }
+
+    if(nameContact.indexOf('&3') != -1){
+        nameContact =nameContact.replace(/&3/g,",");
+    }
+
+    if(nameContact.indexOf('=') != -1){
+        nameContact =nameContact.replace(/=/g,"");
+    }
+
+    return nameContact;
+}
+
+function formatNameComa(nameContact){
+    if(nameContact.indexOf(',') != -1){
+        nameContact = nameContact.replace(/,/g,"&3");
+    }
+    return nameContact;
+}
+
+var MAX_FILAS_GOOGLE = 3;
+
+function rellenarVacio(longitud,codigo,modo) {
+    var faltan = MAX_FILAS_GOOGLE - longitud;
+    var vacias = codigo;
+
+    for(var i=0;i<faltan;i++){
+        vacias = vacias + '<tr id="contact'+ longitud +'" class="pijama1">'
+        + '<td width="25px"></td>'
+        + '<td width="230px"></td>'
+        + '<td width="230px"></td>'
+        + '</tr>';
+
+        longitud = longitud + 1;
+    }
+
+    if(modo == 'modal'){
+        window.opener.document.getElementById('tabContacts').innerHTML = vacias;
+    }else{
+        document.getElementById('tabContacts').innerHTML = vacias;
+    }
+
+}
+
+function formatNameSp(elemArray){
+
+}
+
+function pintarTablaConGoogle(jsonContacts,modo){
+    var contacts = '';
+    var arrayJson = jsonContacts.split(";");
+    var angel = '';
+    var nameAngel = '';
+    var emailAngel = '';
+    if(modo == 'modal'){
+        window.opener.document.getElementById('tabContacts').innerHTML = '';
+    }else{
+        document.getElementById('tabContacts').innerHTML = '';
+    }
+
+    for(var i=0;i<arrayJson.length - 1;i++){
+        angel = arrayJson[i].split(",");
+        if(angel[0].split(":") == false){
+            formatNameSp(arrayJson[i]);
+        }
+        nameAngel = angel[0].split(":");
+        emailAngel = angel[1].split(":");
+
+        contacts = contacts + '<tr id="contact'+ i +'" class="pijama1">'
+        + '<td width="25px">'
+        + '<input type="radio" id="rdContact'+ i +'" '
+        + 'onclick="seleccionarFilaGoogle(\'contact'+i+'\',\'rdContact'+i+'\',\''+formatName(nameAngel[1])+'\',\''+formatName(emailAngel[1])+'\');" />'
+        + '</td>'
+        + '<td width="230px">' + formatName(nameAngel[1]) + '</td>'
+        + '<td width="230px">' + formatName(emailAngel[1]) + '</td>'
+        + '</tr>';
+    }
+
+    // Insert empty rows
+    if((arrayJson.length - 1) < MAX_FILAS_GOOGLE){
+        rellenarVacio(arrayJson.length - 1, contacts, modo);
+    }else{
+        if(modo == 'modal'){
+            window.opener.document.getElementById('tabContacts').innerHTML = contacts;
+        }else{
+            document.getElementById('tabContacts').innerHTML = contacts;
+            habilitarGuardar();
+        }
+    }
+    
+}
+
+function enviarFormularioContacts(aceptar){
+    if(!aceptar){
+        document.getElementById('hdAngelsGoogleSelected').value = '';
+    }else{
+        window.opener.document.getElementById('hdAngelsGoogleSelected').value = document.getElementById('hdAngelsGoogleSelected').value;
+    }
+    pintarTablaConGoogle(window.opener.document.getElementById('hdAngelsGoogleSelected').value,'modal');
+
+    window.close();
+}
+
+function loadContactsEd(titleName,titleEmail){
+    if(document.getElementById('hdAngelsEd').value != ''){
+        var arrayContactsEd = (document.getElementById('hdAngelsEd').value).split(";");
+        var longitud = parseInt(arrayContactsEd.length) - parseInt(1);
+
+        document.getElementById('txtNameTutorEd0').value =  getJsonIdValue(arrayContactsEd[0],'name');
+        document.getElementById('txtEmailTutorEd0').value = getJsonIdValue(arrayContactsEd[0],'email');
+
+        if(longitud > 1){
+            for(var i=1;i<longitud;i++){
+                pintarNuevoContacto(i,titleName,titleEmail);
+                document.getElementById('txtNameTutorEd' + i).value =  getJsonIdValue(arrayContactsEd[i],'name');
+                document.getElementById('txtEmailTutorEd' + i).value = getJsonIdValue(arrayContactsEd[i],'email');
+            }
+        }
+    }
+}
+
+function existAngel(nameAngel){
+    var arrayAngels = (document.getElementById('hdAvailableTags').value).split(",");
+
+    for(var i=0;i<arrayAngels.length;i++){
+        if(arrayAngels[i] == nameAngel){
+            return true;
+        }
+    }
+    return false;
+}
+
+function limpiarFiltro(desFiltro){
+    var cont = parseInt(0);
+    var idFiltro = '';
+
+    for(var i=0;i<5;i++){
+        cont = parseInt(i) + parseInt(1);
+        idFiltro = "txtAngel" + cont + desFiltro;
+        document.getElementById(idFiltro).value = '';
+        document.getElementById(idFiltro).className = '';
+    }
+}
+
+function ordenarFiltro(desFiltro,angeles){
+    var cont = parseInt(0);
+    var idFiltro = '';
+    var arrayAngeles = angeles.split(";");
+
+    limpiarFiltro(desFiltro);
+    for(var i=0;i<arrayAngeles.length;i++){
+        cont = parseInt(i) + parseInt(1);
+        idFiltro = "txtAngel" + cont + desFiltro;
+        document.getElementById(idFiltro).value = arrayAngeles[i];
+    }
+}
+
+function deleteListAngel(desFiltro){
+    var objFiltro = document.getElementById('hdLstAngels' + desFiltro);
+    var idFiltro;
+    var cont = parseInt(0);
+
+    objFiltro.value = '';
+
+    for(var i=0;i<5;i++){
+        cont = parseInt(i) + parseInt(1);
+        idFiltro = "txtAngel" + cont + desFiltro;
+        if(document.getElementById(idFiltro).value != '' && document.getElementById(idFiltro).className == ''
+            && document.getElementById(idFiltro).value != null){
+            if(objFiltro.value == ''){
+                objFiltro.value = document.getElementById(idFiltro).value + ";";
+            }else{
+                objFiltro.value += document.getElementById(idFiltro).value + ";";
+            }
+        }
+    }
+
+    ordenarFiltro(desFiltro,objFiltro.value);
+
+    document.getElementById('hdLstAngels' + desFiltro).value = objFiltro.value;
+}
+
+function saveAngelEd(nameAngelEd,emailAngelEd){
+    //addToJsonAngels(nameAddress,emailAddress,des)
+
+    if(nameAngelEd != '' && emailAngelEd != ''){
+        addToJsonAngels(nameAngelEd,emailAngelEd,'Ed');
+    }else if(nameAngelEd == '' && emailAngelEd == ''){
+        delItemLstJsonAngels();
+        buscarBorrados('Ed');
+        borrarItems('Ed');
+    }
+}
+
+function getIdFiltro(desFiltro){
+    var idCheck;
+
+    if(desFiltro == 'FltWall'){
+        idCheck = 'chkVig0';
+    }else if(desFiltro == 'FltFriends'){
+        idCheck = 'chkVig1';
+    }else if(desFiltro == 'FltPriv'){
+        idCheck = 'chkVig2';
+    }else if(desFiltro == 'FltVist'){
+        idCheck = 'chkVig3';
+    }
+    
+    return idCheck;
+}
+
+function loadCheckFiltro(desFiltro){
+    var idCheck = getIdFiltro(desFiltro);
+
+    if(document.getElementById('hdActive' + desFiltro).value == '1'){
+        document.getElementById(idCheck).checked = true;
+    }
+    else{
+        document.getElementById(idCheck).checked = false;
+    }
+}
+
+function loadAngelSelects(angels){
+    var arrayAngels = angels.split(';');
+
+    for(var i=0;i<arrayAngels.length; i++){
+        $.each($("#fcbklist").children("li").children(".fcbklist_item"),function(index,object){
+            object=$(object);
+            if(object.find("[type=hidden]").val() == arrayAngels[i]){
+                $("#view_selected_count").text(parseInt($("#view_selected_count").text(),10)+1);
+                object.parents("li").attr("addedid","tester");
+                object.toggleClass("itemselected");
+                object.parents("li").toggleClass("liselected");
+            }
+        });
+    }
+}
+
+function loadEstadoFiltro(desFiltro){
+    if(document.getElementById('hdActive' + desFiltro).value == '1'){
+        document.getElementById('hdAngelsAux').value = document.getElementById('hdLstAngels' + desFiltro).value;
+        document.getElementById('slcFrecuency').value = document.getElementById('hdFrec' + desFiltro).value;
+        loadAngelSelects(document.getElementById('hdAngelsAux').value);
+    }
+    else{
+        deshabilitarAngelesFiltro(desFiltro);
+    }
+}
+
+function inicializarHiddenSalidaFiltro(desFiltro){
+    // Se borra la lista de Angeles seleccionados
+    document.getElementById('hdLstAngels' + desFiltro).value = '';
+
+    // Se inicializa el valor de la frecuencia de informes al valor por defecto
+    document.getElementById('hdFrec' + desFiltro).value = '0';
+
+    // Se desactiva el filtro
+    document.getElementById('hdActive' + desFiltro).value = '0';
+}
+
+function cargarOpcionesFiltros(descripcion,desFiltro){
+    document.getElementById('vigilantDescription').innerHTML = '<h1 class="vigilantDescription">' + descripcion + '</h1>';
+    loadEstadoFiltro(desFiltro);
+}
+
+function habilitarEdicion(idCheck,desFiltro){
+    if(document.getElementById(idCheck).checked){
+        habilitarAngelesFiltro(desFiltro);
+    }else{
+        //inicializarHiddenSalidaFiltro(desFiltro);
+        deshabilitarAngelesFiltro(desFiltro);
+    }
+}
+
+function habilitarAngelesFiltro(desFiltro){
+    //var listAngels = document.getElementById('hdAngels').value;
+    var strSubAng = document.getElementById('hdTitleFbList').value;
+    var titleAngelSettAng = document.getElementById('hdTitleAngelSettAng').value;
+
+    document.getElementById('slcFrecuency').disabled = "";
+    document.getElementById('vigilantAngels').innerHTML = "<ul id=\"fcbklist\"></ul>";
+    cargarListaAngels(arrayAngelsVig,titleAngelSettAng);
+    cargarListaVig(strSubAng);
+}
+
+function deshabilitarAngelesFiltro(desFiltro){
+    document.getElementById('slcFrecuency').disabled = "disabled";
+    if(!document.getElementById('vigilantAngelsDisabled')){
+        $(function(){
+            $(document.createElement('div'))
+            .attr('id','vigilantAngelsDisabled')
+            .attr('className','vigilantAngelsDisabled')
+            .width($('#vigilantAngels').width())
+            .height($('#vigilantAngels').height())
+            .prependTo($('#vigilantAngels'));
+            $('#vigilantAngels').css('position','relative');
+        });
+    }
+    document.getElementById('hdLstAngels' + desFiltro).value = '';
+    document.getElementById('hdAngelsAux').value = '';
+    loadAngelSelects(document.getElementById('hdAngelsAux').value);
+}
+
+function disableAllChecks(){
+    for(var i=0;i<4;i++){
+        deshabilitarCheck("chkVig" + i);
+    }
+}
+
+function habilitarCheck(idCheck,desFiltro){
+    disableAllChecks();
+
+    document.getElementById(idCheck).disabled = "";
+    document.getElementById(idCheck).onclick = function(){
+        checkAllFilters();
+        habilitarEdicion(idCheck,desFiltro);
+        activarFiltro(idCheck);
+        habilitarGuardar();
+    }
+
+    if(document.getElementById(idCheck).checked){
+        activarFiltro(idCheck);
+        habilitarAngelesFiltro(desFiltro);
+        loadEstadoFiltro(desFiltro);
+    //desactivarFiltro(idCheck);
+    }else{
+        deshabilitarAngelesFiltro(desFiltro);
+    }
+}
+
+function activarFiltro(idCheck){
+    if(idCheck == 'chkVig0'){
+        document.getElementById('hdActiveFltWall').value = '1';
+        document.getElementById('hdFiltroActual').value = 'FltWall';
+    }else if(idCheck == 'chkVig1'){
+        document.getElementById('hdActiveFltFriends').value = '1';
+        document.getElementById('hdFiltroActual').value = 'FltFriends';
+    }else if(idCheck == 'chkVig2'){
+        document.getElementById('hdActiveFltPriv').value = '1';
+        document.getElementById('hdFiltroActual').value = 'FltPriv';
+    }else if(idCheck == 'chkVig3'){
+        document.getElementById('hdActiveFltVist').value = '1';
+        document.getElementById('hdFiltroActual').value = 'FltVist';
+    }
+}
+
+function desactivar(desFiltro){
+    document.getElementById('hdActive' + desFiltro).value = '0';
+    document.getElementById('hdLstAngels' + desFiltro).value = '';
+    document.getElementById('hdFrec' + desFiltro).value = '3';
+}
+
+function desactivarFiltro(idCheck){
+    if(idCheck == 'chkVig0'){
+        desactivar('FltWall');
+    }else if(idCheck == 'chkVig1'){
+        desactivar('FltFriends');
+    }else if(idCheck == 'chkVig2'){
+        desactivar('FltPriv');
+    }else if(idCheck == 'chkVig3'){
+        desactivar('FltVist');
+    }
+}
+
+function deshabilitarCheck(idCheck){
+    document.getElementById(idCheck).disabled = "disabled";
+    document.getElementById(idCheck).onclick = "";
+
+    document.getElementById('slcFrecuency').disabled = "disabled";
+}
+
+function seleccionVig(idVigilante){
+    saveSelectionAngels();
+
+    limpiarListaVigilantes();
+
+    document.getElementById(idVigilante).className = 'pijama2';
+}
+
+function limpiarListaVigilantes(){
+    for(var i = 0;i < 4; i++){
+        var elemento = document.getElementById('vigilant'+i);
+        if(elemento){
+            document.getElementById('vigilant'+i).className = 'pijama1';
+        }
+    }
+}
+
+function checkAllFilters(){
+    for(var i = 0;i < 4; i++){
+        if(!document.getElementById('chkVig'+i).checked){
+            document.getElementById('chkAllFilters').checked = false;
+            break;
+        }else if(i == 3){
+            document.getElementById('chkAllFilters').checked = true;
+        }
+    }
+}
+
+function setError(idFiltro){
+    document.getElementById(idFiltro).className = 'inputTextError';
+    deshabilitarBtnGuardar();
+}
+
+function unsetError(idFiltro){
+    document.getElementById(idFiltro).className = '';
+    habilitarBtnGuardar();
+}
+
+function setErrorFilter(idFiltro){
+    document.getElementById(idFiltro).className = 'inputTextError';
+    habilitarGuardar();
+}
+
+function unsetErrorFilter(idFiltro){
+    document.getElementById(idFiltro).className = '';
+    habilitarGuardar();
+}
+
+function formatLstAngelNames(){
+    var auxArrayAngels = document.getElementById('hdAvailableTags').value;
+
+    if(auxArrayAngels.indexOf(',') == -1){
+        auxArrayAngels = auxArrayAngels + ',';
+    }
+    return auxArrayAngels;
+}
+
+function selectAllFilters(){
+    for(var i = 0;i < 4; i++){
+        var elemento = document.getElementById('chkVig'+i);
+        if(elemento){
+            if(document.getElementById('chkAllFilters').checked){
+                document.getElementById('chkVig'+i).checked = true;
+            }
+            else{
+                document.getElementById('chkVig'+i).checked = false;
+            }
+        }
+    }
+}
+
+function encodeComponent(idComponent){
+    return encodeURIComponent(document.getElementById(idComponent).value);
+}
+
+function reloadAngels(){
+    var paramSal = '';
+
+    paramSal = 'hdAngels=' + encodeURIComponent(document.getElementById('hdAngels').value)
+    + '&hdAngelsEd=' + encodeURIComponent(document.getElementById('hdAngelsEd').value)
+    + '&hdAngelsGoogleSelected=' + encodeURIComponent(document.getElementById('hdAngelsGoogleSelected').value)
+    + '&hdLstAngelsFltWall=' + encodeURIComponent(document.getElementById('hdLstAngelsFltWall').value)
+    + '&hdLstAngelsFltFriends=' + encodeURIComponent(document.getElementById('hdLstAngelsFltFriends').value)
+    + '&hdLstAngelsFltPriv=' + encodeURIComponent(document.getElementById('hdLstAngelsFltPriv').value)
+    + '&hdLstAngelsFltVist=' + encodeURIComponent(document.getElementById('hdLstAngelsFltVist').value)
+    + '&hdActiveFltWall=' + document.getElementById('hdActiveFltWall').value
+    + '&hdActiveFltFriends=' + document.getElementById('hdActiveFltFriends').value
+    + '&hdActiveFltPriv=' + document.getElementById('hdActiveFltPriv').value
+    + '&hdActiveFltVist=' + document.getElementById('hdActiveFltVist').value
+    + '&hdFrecFltWall=' + encodeURIComponent(document.getElementById('hdFrecFltWall').value)
+    + '&hdFrecFltFriends=' + encodeURIComponent(document.getElementById('hdFrecFltFriends').value)
+    + '&hdFrecFltPriv=' + encodeURIComponent(document.getElementById('hdFrecFltPriv').value)
+    + '&hdFrecFltVist=' + encodeURIComponent(document.getElementById('hdFrecFltVist').value)
+    + '&hdAngelsAux=' + encodeURIComponent(document.getElementById('hdAngelsAux').value);
+
+    return paramSal;
+}
+
+function loadAngels(){
+    var paramSal;
+
+    paramSal = 'hdAngels=' + encodeURIComponent(document.getElementById('hdAngels').value)
+    + '&hdAngelsEd=' + encodeURIComponent(document.getElementById('hdAngelsEd').value)
+    + '&hdAngelsGoogleSelected=' + encodeURIComponent(document.getElementById('hdAngelsGoogleSelected').value)
+    + '&hdLstAngelsFltWall=' + encodeURIComponent(document.getElementById('hdLstAngelsFltWall').value)
+    + '&hdLstAngelsFltFriends=' + encodeURIComponent(document.getElementById('hdLstAngelsFltFriends').value)
+    + '&hdLstAngelsFltPriv=' + encodeURIComponent(document.getElementById('hdLstAngelsFltPriv').value)
+    + '&hdLstAngelsFltVist=' + encodeURIComponent(document.getElementById('hdLstAngelsFltVist').value)
+    + '&hdActiveFltWall=' + document.getElementById('hdActiveFltWall').value
+    + '&hdActiveFltFriends=' + document.getElementById('hdActiveFltFriends').value
+    + '&hdActiveFltPriv=' + document.getElementById('hdActiveFltPriv').value
+    + '&hdActiveFltVist=' + document.getElementById('hdActiveFltVist').value
+    + '&hdFrecFltWall=' + encodeURIComponent(document.getElementById('hdFrecFltWall').value)
+    + '&hdFrecFltFriends=' + encodeURIComponent(document.getElementById('hdFrecFltFriends').value)
+    + '&hdFrecFltPriv=' + encodeURIComponent(document.getElementById('hdFrecFltPriv').value)
+    + '&hdFrecFltVist=' + encodeURIComponent(document.getElementById('hdFrecFltVist').value)
+    + '&hdAngelsAux=' + encodeURIComponent(document.getElementById('hdAngelsAux').value);
+    return paramSal;
+}
+
+function obtenerFrecuencia(idSelect){
+    var objectFrec = document.getElementById(idSelect);
+
+    if(document.getElementById('vigilant0').className == 'pijama2'){
+        document.getElementById('hdFrecFltWall').value = objectFrec.value;
+    } else if(document.getElementById('vigilant1').className == 'pijama2'){
+        document.getElementById('hdFrecFltFriends').value = objectFrec.value;
+    } else if(document.getElementById('vigilant2').className == 'pijama2'){
+        document.getElementById('hdFrecFltPriv').value = objectFrec.value;
+    } else if(document.getElementById('vigilant3').className == 'pijama2'){
+        document.getElementById('hdFrecFltVist').value = objectFrec.value;
+    }
+}
+
+function obtenerUsuario(idUsuario){
+    lanzarModal(context + 'SNSAngelGuardFB/angelUser.jsp?' + idUsuario, 450, 300);
+}
+
+function cerrarVentana(){
+    window.close();
+}
+
+function habilitarBtnGuardar(){
+    $(function(){
+        $("#btnSave").attr('disabled',false);
+    });
+}
+
+function deshabilitarBtnGuardar(){
+    $(function(){
+        $("#btnSave").attr('disabled',true);
+    });
+}
+
+function formatTxt(txtNameAngel){
+    var acentos = "á;é;í;ó;ú;Á;É;Í;Ó;Ú;";
+    var sinAcentos = "a;e;i;o;u;A;E;I;O;U;";
+    var aMinus = txtNameAngel.toLowerCase();
+    var arrayAcentos = acentos.split(";");
+    var arraySinAcentos = sinAcentos.split(";");
+
+    for(var i=0;i<arrayAcentos.length;i++){
+        aMinus = aMinus.replace(arrayAcentos[i],arraySinAcentos[i]);
+    }
+    return aMinus;
+}
+
+function isNameAngelValidOnKeyUp(idFiltro){
+    var contenido = false;
+    var nameAngel = document.getElementById(idFiltro).value;
+
+    var arrayAngels = formatLstAngelNames().split(",");
+
+    for(var i=0;i<arrayAngels.length;i++){
+        if(formatTxt(arrayAngels[i]).lastIndexOf(formatTxt(nameAngel)) != -1){
+            document.getElementById(idFiltro).className = '';
+            contenido = true;
+            break;
+        }else{
+            document.getElementById(idFiltro).className = 'inputTextError';
+            deshabilitarBtnGuardar();
+            contenido = false;
+        }
+
+    }
+    return contenido;
+}
+
+function isNameAngelValid(idFiltro){
+    var contenido = false;
+    var nameAngel = document.getElementById(idFiltro).value;
+
+    var arrayAngels = formatLstAngelNames().split(",");
+
+    if(document.getElementById(idFiltro).className == ''){
+        if(nameAngel != ''){
+            for(var i=0;i<arrayAngels.length;i++){
+                if((arrayAngels[i] == nameAngel) || (formatTxt(arrayAngels[i]) == formatTxt(nameAngel))){
+                    document.getElementById(idFiltro).value = arrayAngels[i];
+                    unsetError(idFiltro);
+                    contenido = true;
+                    break;
+                }else{
+                    setError(idFiltro);
+                    contenido = false;
+                }
+            }
+        } else{
+            unsetError(idFiltro);
+            contenido = false;
+        }
+    }
+    return contenido;
+}
+
+function replaceNameIsDupEmail(emailTutor,newNameTutor){
+
+    var lstAngelsGoogle = document.getElementById('hdAngelsEd').value;
+
+    var arrayAngelsGoogle = '';
+    var componentJson = '';
+    var arrayEmail = '';
+    var arrayName = '';
+    var emailAngel = '';
+    var nameAngel = '';
+    var longitud = parseInt(0);
+    var reemplazado = false;
+
+    if(lstAngelsGoogle != ''){
+        arrayAngelsGoogle = lstAngelsGoogle.split(";");
+        longitud = parseInt(arrayAngelsGoogle.length) - parseInt(1);
+        for(var i=0;i<longitud;i++){
+            if(arrayAngelsGoogle[i] != ''){
+                componentJson = arrayAngelsGoogle[i].split(',');
+                arrayName = componentJson[0].split(":");
+                nameAngel = formatName(arrayName[1]);
+                arrayEmail = componentJson[1].split(":");
+                emailAngel = formatName(arrayEmail[1]);
+                if(formatName(emailAngel).indexOf(emailTutor) != -1){
+                    delToJsonAngels(nameAngel,'Ed');
+                    addToJsonAngels(newNameTutor,emailAngel,"Ed");
+                    reemplazado = true;
+                }
+                else{
+                    addToJsonAngels(nameAngel,emailAngel,"Ed");
+                }
+            }
+        }
+    }
+
+    return reemplazado;
+}
+
+
+function isDupEmail(emailTutor){
+    var lstAngelsGoogle = document.getElementById('hdAngelsEd').value;
+    var arrayAngelsGoogle = '';
+    var componentJson = '';
+    var arrayEmail = '';
+    var emailAngel = '';
+    var repetido = false;
+    var longitud = parseInt(0);
+
+    if(lstAngelsGoogle != ''){
+        arrayAngelsGoogle = lstAngelsGoogle.split(";");
+        longitud = parseInt(arrayAngelsGoogle.length) - parseInt(1);
+        for(var i=0;i<longitud;i++){
+            if(arrayAngelsGoogle[i] != ''){
+                componentJson = arrayAngelsGoogle[i].split(',');
+                arrayEmail = componentJson[1].split(":");
+                emailAngel = arrayEmail[1];
+                if(formatName(emailAngel).indexOf(emailTutor) != -1){
+                    repetido = true;
+                    break;
+                }
+            }
+        }
+    }
+    return repetido;
+}
+
+function isAnyFiltroActivo(){
+    if((document.getElementById('hdActiveFltWall').value == '0') &&
+        (document.getElementById('hdActiveFltFriends').value == '0') &&
+        (document.getElementById('hdActiveFltPriv').value == '0') &&
+        (document.getElementById('hdActiveFltVist').value == '0')){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function isAnyAngelSelected(){
+    if(document.getElementById('hdAngels').value != '' ||
+        document.getElementById('hdAngelsGoogleSelected').value != '' ||
+        document.getElementById('hdAngelsEd').value != ''){
+        if(document.getElementById('hdLstAngelsFltWall').value == '' &&
+            document.getElementById('hdLstAngelsFltFriends').value == '' &&
+            document.getElementById('hdLstAngelsFltPriv').value == '' &&
+            document.getElementById('hdLstAngelsFltVist').value == '' &&
+            document.getElementById('hdAngelsAux').value == ''){
+            return false;
+        }else{
+            return true;
+        }
+    }else{
+        return false;
+    }
+}
+
+function getDesFiltro(){
+    var desFiltro;
+    var numFiltro = parseInt(100);
+
+    for(var i=0;i<4;i++){
+        numFiltro = parseInt(i);
+        if(document.getElementById('vigilant' + i).className == 'pijama2'){
+            break;
+        }
+    }
+
+    switch (numFiltro) {
+        case 0:
+            desFiltro = 'FltWall';
+            break;
+        case 1:
+            desFiltro = 'FltFriends';
+            break;
+        case 2:
+            desFiltro = 'FltPriv';
+            break;
+        case 3:
+            desFiltro = 'FltVist';
+            break;
+        default:
+            desFiltro = '';
+    }
+
+    return desFiltro;
+}
+
+function getFiltro(id){
+    var desFiltro = '';
+
+    switch (id) {
+        case 0:
+            desFiltro = 'FltWall';
+            break;
+        case 1:
+            desFiltro = 'FltFriends';
+            break;
+        case 2:
+            desFiltro = 'FltPriv';
+            break;
+        case 3:
+            desFiltro = 'FltVist';
+            break;
+        default:
+            desFiltro = '';
+    }
+
+    return desFiltro;
+}
+
+function isAnyErrorId(idActual){
+    var isError = false;
+
+    if(document.getElementById(idActual).className == 'inputTextError'){
+        isError = true;
+    }
+
+    return isError;
+}
+
+function isAnyError(){
+    var error = false;
+    
+    if(document.getElementById('tabFriendsImport')){
+        var tabla = document.getElementById('tabFriendsImport');
+        for(var i=0;i<tabla.rows.length;i++){
+            if(document.getElementById('txtNameTutorEd' + i) && document.getElementById('txtEmailTutorEd' + i)){
+                if(isAnyErrorId('txtNameTutorEd' + i) || isAnyErrorId('txtEmailTutorEd' + i)){
+                    error = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    return error;
+}
+
+function habilitarGuardar(){
+    var valido = true;
+    if(isAnyFiltroActivo() && isAnyAngelSelected() && !isAnyError()){
+        habilitarBtnGuardar();
+    }else{
+        deshabilitarBtnGuardar();
+        valido = false;
+    }
+
+    return valido;
+}
+
+function saveSettings(menSave,menWait){
+    muestraLoader(menSave,menWait);
+    
+    if(document.getElementById('frSNSVigilants')){
+        saveSelectionAngels();
+    }
+
+    document.getElementById('h1').value = encodeURIComponent(document.getElementById('hdAngels').value);
+    document.getElementById('h2').value = encodeURIComponent(document.getElementById('hdAngelsGoogleSelected').value);
+    document.getElementById('h3').value = encodeURIComponent(document.getElementById('hdAngelsEd').value);
+    document.getElementById('h4').value = encodeURIComponent(document.getElementById('hdLstAngelsFltWall').value);
+    document.getElementById('h5').value = encodeURIComponent(document.getElementById('hdLstAngelsFltFriends').value);
+    document.getElementById('h6').value = encodeURIComponent(document.getElementById('hdLstAngelsFltPriv').value);
+    document.getElementById('h7').value = encodeURIComponent(document.getElementById('hdLstAngelsFltVist').value);
+    document.getElementById('h8').value = encodeURIComponent(document.getElementById('hdActiveFltWall').value);
+    document.getElementById('h9').value = encodeURIComponent(document.getElementById('hdActiveFltFriends').value);
+    document.getElementById('h10').value = encodeURIComponent(document.getElementById('hdActiveFltPriv').value);
+    document.getElementById('h11').value = encodeURIComponent(document.getElementById('hdActiveFltVist').value);
+    document.getElementById('h12').value = encodeURIComponent(document.getElementById('hdFrecFltWall').value);
+    document.getElementById('h13').value = encodeURIComponent(document.getElementById('hdFrecFltFriends').value);
+    document.getElementById('h14').value = encodeURIComponent(document.getElementById('hdFrecFltPriv').value);
+    document.getElementById('h15').value = encodeURIComponent(document.getElementById('hdFrecFltVist').value);
+
+    if(document.getElementById('frSNSVigilants')){
+        document.getElementById('frSNSVigilants').setAttribute('action','checkNow.jsp');
+        document.getElementById('frSNSVigilants').setAttribute('method','post');
+        document.getElementById('frSNSVigilants').submit();
+    }else{
+        document.getElementById('frSNSAngels').setAttribute('action','checkNow.jsp');
+        document.getElementById('frSNSAngels').setAttribute('method','post');
+        document.getElementById('frSNSAngels').submit();
+    }
+}
+
+function loadInicioDates(angels,hdAngelsEd,hdAngelsGoogleSelected,
+    hdLstAngelsFltWall,hdLstAngelsFltFriends,hdLstAngelsFltPriv,hdLstAngelsFltVist,
+    hdActiveFltWall,hdActiveFltFriends,hdActiveFltPriv,hdActiveFltVist,
+    hdFrecFltWall,hdFrecFltFriends,hdFrecFltPriv,hdFrecFltVist,hdAngelsAux){
+
+    document.getElementById('hdAngels').value = decodeURIComponent(angels);
+    document.getElementById('hdAngelsEd').value = decodeURIComponent(hdAngelsEd);
+    document.getElementById('hdAngelsGoogleSelected').value = decodeURIComponent(hdAngelsGoogleSelected);
+    document.getElementById('hdLstAngelsFltWall').value = decodeURIComponent(hdLstAngelsFltWall);
+    document.getElementById('hdLstAngelsFltFriends').value = decodeURIComponent(hdLstAngelsFltFriends);
+    document.getElementById('hdLstAngelsFltPriv').value = decodeURIComponent(hdLstAngelsFltPriv);
+    document.getElementById('hdLstAngelsFltVist').value = decodeURIComponent(hdLstAngelsFltVist);
+    document.getElementById('hdActiveFltWall').value = decodeURIComponent(hdActiveFltWall);
+    document.getElementById('hdActiveFltFriends').value = decodeURIComponent(hdActiveFltFriends);
+    document.getElementById('hdActiveFltPriv').value = decodeURIComponent(hdActiveFltPriv);
+    document.getElementById('hdActiveFltVist').value = decodeURIComponent(hdActiveFltVist);
+    document.getElementById('hdFrecFltWall').value = decodeURIComponent(hdFrecFltWall);
+    document.getElementById('hdFrecFltFriends').value = decodeURIComponent(hdFrecFltFriends);
+    document.getElementById('hdFrecFltPriv').value = decodeURIComponent(hdFrecFltPriv);
+    document.getElementById('hdFrecFltVist').value = decodeURIComponent(hdFrecFltVist);
+    document.getElementById('hdAngelsAux').value = decodeURIComponent(hdAngelsAux);
+}
+
+function isEmailValid(emailTutor){
+    if(emailTutor != ''){
+        if(emailTutor.indexOf('@') != -1){
+            if(!isDupEmail(emailTutor)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
+function isDatesValid(idName,idEmail){
+    var name = document.getElementById(idName).value;
+    var email = document.getElementById(idEmail).value;
+    
+    if((name != '' && email != '') || (email != '')){
+        if(!isEmailValid(email)){
+            if(replaceNameIsDupEmail(email,name)){
+                unsetError(idName);
+                unsetError(idEmail);
+            }else{
+                unsetError(idName);
+                setError(idEmail);
+            }
+        }else if(name == ''){
+            setError(idName);
+        }else{
+            unsetError(idName);
+            unsetError(idEmail);
+            saveAngelEd(name,email);
+        }
+    }else if(email == ''){
+        if(name != ''){
+            setError(idEmail);
+        }else{
+            unsetError(idName);
+            unsetError(idEmail);
+            saveAngelEd(name,email);
+        }
+    }
+    habilitarGuardar();
+}
+
+function isDatesTutorValid(numAngel){
+    var nameTutor = 'txtNameTutorEd' + numAngel;
+    var emailTutor = 'txtEmailTutorEd' + numAngel;
+
+    isDatesValid(nameTutor,emailTutor);
+
+}
+
+function muestraLoader(menCarga, menWait){   
+    $(function(){
+        $.loader({
+            content:"<div><table width=\"100%\"><tr><td width=\"100%\">"
+            + "<h1 class=\"tituloMed\">" + menCarga + "</h1>"
+            + "</td></tr>"
+            + "<tr><td>"
+            + "<table width=\"100%\"><tr><td width=\"80%\">" + menWait + "</td><td width=\"20%\"><img src=\"http://oe.dynalias.net:8080/SNSAngelGuardFB/resources/ajax-loader_1.gif\" alt=\"\">"
+            + "</td></tr></table></td></tr></table></div>"
+        });
+    });
+}
+
+function cerrarLoader(){
+    $(function(){
+        $.loader('close');
+    });
+}
+
+function cerrarLoaderMod(){
+    $(function(){
+        if($("#jquery-loader")){
+            $.loader('close');
+        }
+    });
+}
+
+function muestraLoaderSin(){
+    $(function(){
+        $.loader({
+            className:"blue-with-image-2",
+            content:''
+        });
+    });
+}
+
+function setLoader(){
+    $(function(){
+        $.loader('setContent', '<div></div>');
+    });
+}
+
+function loadTitleFcbList(titleFbList,titleAngelSettAng){
+    document.getElementById('hdTitleFbList').value = titleFbList;
+    document.getElementById('hdTitleAngelSettAng').value = titleAngelSettAng;
+}
+
+function setArrayAngels(arrayAngels){
+    arrayAngelsVig = arrayAngels;
+}
+
+function pintarNuevoContacto(numNewRow,titleName,titleEmail){
+    var tabla = document.getElementById('tabFriendsImport');
+    var siguiente = parseInt(numNewRow) + parseInt(1);
+
+    tabla.rows[numNewRow].innerHTML = "<td width=\"15%\" align=\"center\"><center><h1 class=\"tituloMed\">" + siguiente + ".</h1></center>"
+    + "</td><td width=\"40%\" align=\"right\"><label for=\"txtNameTutorEd" + numNewRow + "\">" + titleName + " </label>"
+    + "<input type=\"text\" name=\"txtNameTutorEd" + numNewRow + "\" id=\"txtNameTutorEd" + numNewRow + "\" size=\"25\" maxlength=\"70\""
+    + "onchange=\"isDatesTutorValid(" + numNewRow + ");\" value=\"\" /></td>"
+    + "<td width=\"55%\" align=\"right\"><label for=\"txtEmailTutorEd" + numNewRow + "\">" + titleEmail + " </label>"
+    + "<input type=\"text\" name=\"txtEmailTutorEd" + numNewRow + "\" id=\"txtEmailTutorEd" + numNewRow + "\" size=\"25\" maxlength=\"70\""
+    + "onchange=\"isDatesTutorValid(" + numNewRow + ");\" value=\"\" /></td>";
+
+    tabla.insertRow(siguiente);
+    tabla.rows[siguiente].className = "imgContent";
+    tabla.rows[siguiente].innerHTML =  "<td width=\"15%\" height=\"20px\" align=\"center\">"
+    + "<img alt=\"\" class=\"newAngel\" src=\"" + context +"SNSAngelGuardFB/resources/anadir.gif\""
+    + "onclick=\"pintarNuevoContacto(" + siguiente + ",'" + titleName + "','" + titleEmail +"');\"> </img>"
+    + "</td><td width=\"40%\" align=\"right\"></td><td width=\"55%\" align=\"right\"></td>";
+
+    despInfScroll('friendsImportContainer');
+}
+
+function despInfScroll(idObjeto){
+    var scc = document.getElementById(idObjeto);
+    scc.scrollTop = scc.scrollHeight + scc.offsetHeight;
+
+}
+
+function getDesFiltroActivo(){
+    var des = '';  
+    
+    if(document.getElementById('vigilant0').className == 'pijama2'){
+        des = 'FltWall';
+    }else if(document.getElementById('vigilant1').className == 'pijama2'){
+        des = 'FltFriends';
+    }else if(document.getElementById('vigilant2').className == 'pijama2'){
+        des = 'FltPriv';
+    }else if(document.getElementById('vigilant3').className == 'pijama2'){
+        des = 'FltVist';
+    }
+    
+    return des;
+}
+
+function saveSelectionAngels(){
+    var des = '';
+
+    if(isAnyFiltroActivo()){
+        des = document.getElementById('hdFiltroActual').value;
+        if(des != ''){
+            document.getElementById('hdFrec' + des).value = document.getElementById('slcFrecuency').value;
+            document.getElementById('hdLstAngels' + des).value = document.getElementById('hdAngelsAux').value;
+            document.getElementById('hdAngelsAux').value = '';
+        }
+    }
+}
+
+function borrarItems(desFiltro){
+    var itemEdBorrado = (document.getElementById("hdAngels" + desFiltro +"Aux").value).split(";");
+    for(var i=0;i<itemEdBorrado.length - 1; i++){
+        borrarItemVigilants(itemEdBorrado[i]);
+    }
+}
+
+function borrarItemSelected(idItem,idFiltro){
+    var lstAux = '';
+    var arrayLstAngels = '';
+    var cont = parseInt(0);
+    if((document.getElementById('hdLstAngels' + idFiltro).value != '')&&(document.getElementById('hdLstAngels' + idFiltro).value != 'null')){
+        
+        arrayLstAngels = (document.getElementById('hdLstAngels' + idFiltro).value).split(";");
+
+        for(var i=0;i<arrayLstAngels.length;i++){
+            if(arrayLstAngels[i] != ''){
+                if(idItem.indexOf(arrayLstAngels[i]) == -1){
+                    if(cont == parseInt(0)){
+                        lstAux = arrayLstAngels[cont] + ";";
+                    }else{
+                        lstAux += arrayLstAngels[cont] + ";";
+                    }
+                }
+                cont = parseInt(cont) + parseInt(1);
+            }
+        }
+    }else{
+        lstAux = '';
+    }
+
+    document.getElementById('hdLstAngels' + idFiltro).value = lstAux;
+
+    if(document.getElementById('hdLstAngels' + idFiltro).value == ''){
+        document.getElementById('hdActive' + idFiltro).value = '0';
+    }else{
+        document.getElementById('hdActive' + idFiltro).value = '1';
+    }
+}
+
+function borrarItemVigilants(idItem){
+    borrarItemSelected(idItem,'FltWall');
+    borrarItemSelected(idItem,'FltFriends');
+    borrarItemSelected(idItem,'FltPriv');
+    borrarItemSelected(idItem,'FltVist');
+
+    habilitarGuardar();
+}
+
+var changeForm = false;
+var sameForm = false;
+
+function setChangeForm(valor){
+    changeForm = valor;
+}
+
+function setWinOpen(){
+    changeForm = true;
+    muestraLoaderSin();
+}
+
+
+function clearWinOpen(){
+    $(function(){
+        if(window.opener.$('jquery-loader')){
+            window.opener.$("#jquery-loader").remove();
+            window.opener.$("#jquery-loader-background").remove();
+        
+        }
+    });
+}
+
+function checkChangeForm(){
+    //alert("change: " + changeForm);
+    //alert("same: " + sameForm);
+    if((changeForm == false && sameForm == true) || 
+        (changeForm == false && sameForm == false)||
+        (changeForm == true && sameForm == true)){
+        //alert("LIMPIANDO VENTANA");
+        clearWinOpen();
+    }else if(changeForm == true){
+        sameForm = false;
+    }
+
+}
+
+function iniciarModal(){
+    //alert("INICIANDO MODAL");
+    changeForm = false;
+    sameForm = false;
+}
+
+function salirModal(){
+    //alert("SALIENDO MODAL")
+    setChangeForm(false);
+    sameForm = false;
+}
+
+function initRender(){
+    changeForm = true;
+    sameForm = true;
+}

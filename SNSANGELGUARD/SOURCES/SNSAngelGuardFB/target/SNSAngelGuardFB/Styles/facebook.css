@@ -1,0 +1,541 @@
+/* 
+    Document   : facebook
+    Created on : 15-dic-2010, 11:45:00
+    Author     : tote
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    padding:10px;
+    overflow-x:hidden;
+}
+
+titulo {
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:40px;
+    color: #3b5998;
+    margin:30px 0;
+}
+
+h1.titulo{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:40px;
+    color: #3b5998;
+    margin:10px;
+}
+
+h1.tituloGr{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:20px;
+    color: #3b5998;
+    margin:5px;
+}
+
+h1.tituloMed{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:15px;
+    color: #3b5998;
+    margin:5px;
+}
+
+h1.tituloMedCabOtrosContactos{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:15px;
+    color: #3b5998;
+    margin:5px;
+    float: left;
+}
+
+h1.letraNorm{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+    color: #3b5998;
+    margin:5px;
+}
+
+h1.aceptinTerms{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:15px;
+    color:#333;
+    text-align:justify;
+    padding:10px 10px 10px 10px;
+}
+
+h1.acuerdoLegal{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+    text-align:justify;
+    color:#808080;
+    padding:10px 10px 10px;
+}
+
+h1.divDetails{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+    color:#808080;
+    padding:10px 10px 10px;
+}
+
+h1.vigilantDescription{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+    text-align:justify;
+    color:#808080;
+    margin:3px;
+}
+
+h1.infoAngelGuard{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+    color:#333;
+    text-align:justify;
+    margin: 5px;
+}
+
+hr.linea{
+    background:#d9d9d9;
+    border-width:0;
+    color:#d9d9d9;
+    height:1px;
+    margin:2px;
+}
+
+A.link{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #3b5998;
+    cursor:pointer;
+}
+
+A.linkHelp{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #3b5998;
+    cursor:pointer;
+    margin:15px;
+    padding: 10px 10px 10px 10px;
+}
+
+input.inputTextDisabled {
+    cursor:default;
+    background:#d9d9d9;
+}
+
+input.inputTextError{
+    background-color: red;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    color: white;
+}
+
+input.search {
+    background:white url(facebook.com/images/magglass.png) no-repeat scroll 3px 4px;
+    padding-left:17px;
+}
+
+
+input, textarea, select {
+    border:1px solid #BDC7D8;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    text-align:right;
+    padding:3px;
+}
+
+.boton{
+    width:120px;
+    height:35px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size:10px;
+    cursor:pointer;
+    background:#3b5998;
+    color:#fff;
+    border:1px solid #3b5998;
+}
+
+.botonDisabled{
+    width:120px;
+    height:35px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size:10px;
+    cursor:default;
+    background:#d9d9d9;
+    color:#fff;
+    border:1px solid #d9d9d9;
+}
+
+input[type="text"] {
+    width: 170px;
+}
+
+input:focus, textarea:focus, select:focus {border-color:#687FB0}
+.field {border:1px solid #bdc7d8; padding:2px}
+.field:focus {border-color:#687FB0}
+textarea.field {width:98.5%;height:100px}
+
+input[type="botonIzq"] {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size:10px; cursor:pointer;
+    background:#3b5998; color:#fff;
+    border:1px solid #0e1f5b;
+    border-left-color:#D9DFEA;
+    border-top-color:#D9DFEA;
+}
+
+input[disabled]{
+    text-align: center;
+    cursor:default;
+    background:#d9d9d9;
+    color:grey;
+}
+
+button.next, button.cancel {
+    background:#ddd;
+    color:#111;
+    border:1px solid #666;
+    border-left-color:#ddd;
+    border-top-color:#ddd
+}
+
+table.ensayo {
+    border: 1px solid #BDC7D8;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:20px;
+    margin: 20px auto;
+}
+
+div.acuerdoLegal {
+    border: 1px solid #d9d9d9;
+    width: 75%;
+    height: 400px;
+    overflow-y: scroll;
+    background:#f7f7f7;
+    margin:15px;
+}
+
+div.divDetails {
+    border: 1px solid #d9d9d9;
+    width: 95%;
+    height: 250px;
+    overflow-y: scroll;
+    background:#f7f7f7;
+    margin:10px 10px 10px 35px;
+}
+
+div.Menu{
+    width:auto;
+    height: 50%;
+    background:#FFF;
+    border:1px solid #CCC;
+    padding:0 0 3px 0;
+}
+
+div.Menu ul{
+    margin:0 auto;
+    padding:0;
+    width:95%
+}
+div.Menu ul li.CaptionClass{
+    text-align:center;
+    padding:10px 0;
+}
+
+div.AjaxContent{
+    width:auto;
+    height: 70%;
+    padding:10px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+div.friendsContent{
+    width:675px;
+    height:350px;
+    margin:5px;
+    padding:10px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+div.friendsGoogleImport{
+    width:675px;
+    height:125px;
+    margin:5px;
+    padding:5px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+div.friendsImport{
+    width:675px;
+    height:105px;
+    margin:5px;
+    padding:5px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+div.friendsImportContainer{
+    width:675px;
+    height:70px;
+    margin:5px;
+    background-color:#FFF;
+    overflow-y:scroll;
+    border:1px solid #CCC;
+}
+
+div.vigilants{
+    width:690px;
+    height:615px;
+    margin:5px;
+    padding:10px 20px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+div.vigilantsContent{
+    width:182px;
+    height:542px;
+    overflow-y:scroll;
+    border: 1px solid #CCC;
+}
+
+div.vigilantDescription{
+    width:450px;
+    height:91px;
+    margin:5px;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+div.vigilantFrec{
+    width:450px;
+    height:30px;
+    margin:5px;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+div.vigilantAngels{
+    width:450px;
+    height:324px;
+    margin:5px;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+div.vigilantAngelsDisabled{
+    width:450px;
+    height:324px;
+    padding:10px 20px;
+    background-color: silver;
+    opacity:0.4;
+    position:absolute;
+    z-index:100;
+    left:0;
+    top:0;
+}
+
+div.windowDisabled{
+    padding: 0;
+    margin: 0;
+    display: block;
+    position:absolute;
+    top:0;
+    z-index:1000;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity:0.4;
+}
+
+div.contactContent{
+    width:627px;
+    height:218px;
+    overflow-y:scroll;
+}
+
+div.contactContentGoogle{
+    width:500px;
+    height:83px;
+    overflow-y:scroll;
+    border:1px solid #CCC;
+}
+
+div.divAngelConfirmation{
+    height:250px;
+    width: 95%;
+    margin:5px;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+div.divAngelUserContainer{
+    position: absolute;
+    /*nos posicionamos en el centro del navegador*/
+    top:50%;
+    left:50%;
+    /*determinamos una anchura*/
+    width:700px;
+    /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+    margin-left:-350px;
+    /*determinamos una altura*/
+    height:450px;
+    /*indicamos que el margen superior, es la mitad de la altura*/
+    margin-top:-225px;
+    border:1px solid #CCC;
+}
+
+div.divAngelUser{
+    height:280px;
+    width: 620px;
+    margin:15px;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+div.divAngelNotificationContainer{
+    position: absolute;
+    width: 95%;
+    margin:15px;
+}
+
+div.divFilter{
+    height: auto;
+    margin: 10px;
+    width: 95%;
+    padding:10px 20px;
+    background:#f7f7f7;
+    border:1px solid #CCC;
+}
+
+table.cabecera{
+    width:640px;
+    height:20px;
+    border-width: 2px;
+    border-spacing: 2px;
+    border-style: ridge;
+    border-color:white;
+    border-collapse: separate;
+}
+
+table.tabCenter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 200px;
+    margin-top: -100px;
+    width: 450px;
+    margin-left: -225px;
+}
+
+img.newAngel{
+    cursor:pointer;
+}
+
+img.errorInfo{
+    position: relative;
+    float: left;
+    margin: 1px 1px 8px 20px;
+}
+
+img.cabOtrosContactos {
+    cursor: pointer;
+    float: right;
+    margin: 1px 2px 1px 1px;
+}
+
+img.cabBtnDespError {
+    cursor: pointer;
+    float: left;
+    margin: 9px 10px 1px 7px;
+}
+
+img.cabOtrosContactosDisabled {
+    float: right;
+    margin: 1px 2px 1px 1px;
+}
+
+tr.imgContent{
+    height:30px;
+}
+
+tr.cabecera{
+    height:30px;
+    border-width: 1px;
+    padding: 1px;
+    border-style: ridge;
+    border-color:white;
+    background-color: #3b5998;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color:#fff;
+}
+
+tr.cabeceraVigilants{
+    height:30px;
+    background-color: #3b5998;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color:#fff;
+}
+
+table.contacts{
+    width:630px;
+    border-width: 2px;
+    border-spacing: 2px;
+    border-style: ridge;
+    border-color:white;
+    border-collapse: separate;
+}
+
+tr.pijama1{
+    height:25px;
+    border-width: 1px;
+    padding: 1px;
+    border-style: ridge;
+    border-color:white;
+    background-color: #d9d9d9;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 12px;
+    text-align: left;
+    color:gray;
+}
+
+tr.pijama2{
+    height:25px;
+    border-width: 1px;
+    padding: 1px;
+    border-style: ridge;
+    border-color:white;
+    background-color: #808080;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 12px;
+    text-align: left;
+    color:white;
+}
+
+td.btnDercha{
+    float: right;
+    padding:5px;
+}
