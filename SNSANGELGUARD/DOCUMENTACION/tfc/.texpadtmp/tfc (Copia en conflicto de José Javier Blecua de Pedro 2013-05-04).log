@@ -1,0 +1,1713 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 MAY 2013 12:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**tfc.tex
+(./tfc.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2011/10/06 v5.0k Spanish support from the babel system
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+)
+\es@datefmt=\count90
+\es@quottoks=\toks14
+\es@quotdepth=\count91
+Package babel Info: Making " an active character on input line 496.
+Package babel Info: Making . an active character on input line 599.
+Package babel Info: Making < an active character on input line 644.
+Package babel Info: Making > an active character on input line 644.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen104
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks19
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks20
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks21
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count104
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count105
+\mult@box=\box28
+\multicol@leftmargin=\dimen115
+\c@unbalance=\count106
+\c@collectmore=\count107
+\doublecol@number=\count108
+\multicoltolerance=\count109
+\multicolpretolerance=\count110
+\full@width=\dimen116
+\page@free=\dimen117
+\premulticols=\dimen118
+\postmulticols=\dimen119
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box29
+\last@line=\box30
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count111
+\c@finalcolumnbadness=\count112
+\last@try=\dimen120
+\multicolovershoot=\dimen121
+\multicolundershoot=\dimen122
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\multicol@sort@counter=\count113
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip59
+\subfigcapskip=\skip60
+\subfigcaptopadj=\dimen123
+\subfigbottomskip=\skip61
+\subfigcapmargin=\dimen124
+\subfiglabelskip=\skip62
+\c@subfigure=\count114
+\c@lofdepth=\count115
+\c@subtable=\count116
+\c@lotdepth=\count117
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip63
+\subfig@bottom=\skip64
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip65
+\LTright=\skip66
+\LTpre=\skip67
+\LTpost=\skip68
+\LTchunksize=\count118
+\LTcapwidth=\dimen125
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@cols=\count119
+\LT@rows=\count120
+\c@LT@tables=\count121
+\c@LT@chunks=\count122
+\LT@p@ftn=\toks26
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/anysize/anysize.sty
+Package: anysize 1994/08/13 setting margin sizes
+
+document style option `anysize' loaded
+Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
+Version 1.0, Aug 13, 1994
+\@Leftmargin=\dimen126
+\@Rightmargin=\dimen127
+\@Topmargin=\dimen128
+\@Bottommargin=\dimen129
+)
+\@indexfile=\write3
+\openout3 = `tfc.idx'.
+
+
+Writing index file tfc.idx
+
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.aux
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/previo.aux)
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/dedicatoria.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/agradecimientos.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/resumen.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/introduccion.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo1.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo2.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo3.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo4.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo5.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo6.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/apendice-a.aux))
+\openout1 = `tfc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen130
+\scratchbox=\box58
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen131
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\openout2 = `previo.aux'.
+
+
+(./previo.tex
+Package epstopdf Info: Source file: <Figuras/LogoUAH.eps>
+(epstopdf)                    date: 2013-04-27 13:55:45
+(epstopdf)                    size: 184469 bytes
+(epstopdf)             Output file: <Figuras/LogoUAH-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-04-27 13:55:47
+(epstopdf)                    size: 43570 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figuras/LogoUAH-eps-conver
+ted-to.pdf Figuras/LogoUAH.eps>
+(epstopdf)             \includegraphics on input line 23.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figuras/LogoUAH-eps-converted-to.pdf, id=1, 606.265pt x 688.5725pt>
+File: Figuras/LogoUAH-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figuras/LogoUAH-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/LogoUAH-eps-converted-to.pdf used on input lin
+e 23.
+(pdftex.def)             Requested size: 113.81102pt x 129.2541pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)) [1
+
+
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figur
+as/LogoUAH-eps-converted-to.pdf>] [2
+
+
+] [1]
+\openout2 = `dedicatoria.aux'.
+
+ (./dedicatoria.tex) [2
+
+]
+\openout2 = `agradecimientos.aux'.
+
+ (./agradecimientos.tex)
+[3
+
+
+
+]
+\openout2 = `resumen.aux'.
+
+ (./resumen.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [4
+
+
+
+] [5]
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [6
+
+]) [7]
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+ [8
+
+
+]
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [1
+
+]
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+ [2]
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
+ [3])
+\tf@toc=\write4
+\openout4 = `tfc.toc'.
+
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+ [4]
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write5
+\openout5 = `tfc.lof'.
+
+ [5
+
+]
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+ [6
+
+]
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [7])
+\tf@lot=\write6
+\openout6 = `tfc.lot'.
+
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
+ [8]
+\openout2 = `introduccion.aux'.
+
+ (./introduccion.tex
+Cap\'{\i }tulo 1.
+[9
+
+
+]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [10]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [11]
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+ [12]
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [13] <Figuras/REST.png, id=96, 414.04688pt x 286.82156pt>
+File: Figuras/REST.png Graphic file (type png)
+
+<use Figuras/REST.png>
+Package pdftex.def Info: Figuras/REST.png used on input line 125.
+(pdftex.def)             Requested size: 341.44125pt x 227.62816pt.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
+ [14]
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+ [15 <./Figuras/REST.png (PNG copy)>])
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
+ [16]
+\openout2 = `capitulo1.aux'.
+
+
+(./capitulo1.tex
+Cap\'{\i }tulo 2.
+<Figuras/ArchitectureSNS.png, id=107, 746.79pt x 796.9775pt>
+File: Figuras/ArchitectureSNS.png Graphic file (type png)
+
+<use Figuras/ArchitectureSNS.png>
+Package pdftex.def Info: Figuras/ArchitectureSNS.png used on input line 15.
+(pdftex.def)             Requested size: 341.43086pt x 284.52814pt.
+ [17
+
+
+
+]
+<Figuras/lastModelSocialNetworkDB.png, id=111, 3937.71124pt x 2350.7825pt>
+File: Figuras/lastModelSocialNetworkDB.png Graphic file (type png)
+
+<use Figuras/lastModelSocialNetworkDB.png>
+Package pdftex.def Info: Figuras/lastModelSocialNetworkDB.png used on input lin
+e 38.
+(pdftex.def)             Requested size: 483.6807pt x 540.59688pt.
+
+Overfull \hbox (28.43661pt too wide) in paragraph at lines 38--39
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+[18 <./Figuras/ArchitectureSNS.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+ [19 <./Figuras/lastModelSocialNetworkDB.png>]
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+ [20]
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
+ [21]
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+ [22]
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+ [23])
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [24]
+\openout2 = `capitulo2.aux'.
+
+ (./capitulo2.tex
+Cap\'{\i }tulo 3.
+[25
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]\T1/cmr/m/n/12 Indicador de acep-ta-ciÛn del
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 51--51
+\T1/cmr/m/n/12 acuer-do le-gal por par-te del
+ []
+
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+[26]
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+ [27]
+Underfull \vbox (badness 10000) detected at line 102
+ []
+
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
+[28]
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+ [29]
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+ [30]
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
+ [31]
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
+ [32]
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [33]
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+ [34]
+Underfull \hbox (badness 1484) in paragraph at lines 296--296
+[]\T1/cmr/m/n/12 DescripciÛn pro-pia del usua-rio
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 300--300
+[]\T1/cmr/m/n/12 Identificador de su usua-rio en
+ []
+
+
+Overfull \hbox (41.34451pt too wide) in paragraph at lines 282--302
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
+[35]
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
+ [36]
+Overfull \hbox (36.76651pt too wide) in alignment at lines 330--336
+ [] [] [] 
+ []
+
+
+Overfull \hbox (36.76651pt too wide) in alignment at lines 336--340
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/m/n/12 Address_openSocial_CURRENT_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+[]|\T1/cmr/m/n/12 Drinker_openSocial_id_Drinker_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+[]|\T1/cmr/m/n/12 Gender_openSocial_id_Gender_
+ []
+
+
+Overfull \hbox (36.76651pt too wide) in alignment at lines 340--362
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 362
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
+[]|\T1/cmr/m/n/12 LookingFor_openSocial_id_Looking
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]|\T1/cmr/m/n/12 Presence_openSocial_id_Presence_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
+[]|\T1/cmr/m/n/12 Smoker_openSocial_id_Smoker_
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/12 Tendencias que des-agra-dan al
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/12 Tendencias que sor-pren-den al
+ []
+
+
+Overfull \hbox (36.76651pt too wide) in alignment at lines 362--381
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
+[37]
+Underfull \hbox (badness 1320) in paragraph at lines 395--395
+[]\T1/cmr/m/n/12 Identificador de su usua-rio en
+ []
+
+
+Overfull \hbox (35.47095pt too wide) in paragraph at lines 390--397
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 403.
+LaTeX Info: Redefining \% on input line 403.
+[38]
+LaTeX Info: Redefining \. on input line 432.
+LaTeX Info: Redefining \% on input line 432.
+ [39]
+Underfull \hbox (badness 1320) in paragraph at lines 468--468
+[]\T1/cmr/m/n/12 Identificador de su usua-rio en
+ []
+
+
+Overfull \hbox (35.47095pt too wide) in paragraph at lines 463--470
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 495.
+LaTeX Info: Redefining \% on input line 495.
+[40]
+Overfull \hbox (13.7817pt too wide) in paragraph at lines 498--499
+\T1/cmr/m/n/12 maes-tra que con-ten-dr· va-lo-res fi-jos que se-r·n re-fe-ren-c
+ia-dos des-de la ta-bla \T1/cmr/bx/n/12 user_openSocial\T1/cmr/m/n/12 .
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+[41]
+Overfull \hbox (3.44305pt too wide) in paragraph at lines 553--553
+[]\T1/cmr/bx/n/14.4 Tablas de di-rec-cio-nes Ad-dress_openSocial y Or-ga-ni-za-
+tion_
+ []
+
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 597--597
+[]\T1/cmr/m/n/12 Address_openSocial_id_Address_
+ []
+
+
+Overfull \hbox (22.54013pt too wide) in paragraph at lines 594--608
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 615.
+LaTeX Info: Redefining \% on input line 615.
+[43]
+LaTeX Info: Redefining \. on input line 632.
+LaTeX Info: Redefining \% on input line 632.
+ [44]
+LaTeX Info: Redefining \. on input line 676.
+LaTeX Info: Redefining \% on input line 676.
+ [45]
+Underfull \hbox (badness 1264) in paragraph at lines 703--703
+[]\T1/cmr/m/n/12 Cuerpo del men-sa-je co-di-fi-ca-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
+[]\T1/cmr/m/n/12 Message_Type_openSocial_id_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
+[]\T1/cmr/m/n/12 user_openSocial_id_user_ open-
+ []
+
+
+Overfull \hbox (28.4137pt too wide) in paragraph at lines 699--709
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+[46]
+Overfull \hbox (18.28838pt too wide) in alignment at lines 735--741
+ [] [] [] 
+ []
+
+
+Overfull \hbox (18.28838pt too wide) in alignment at lines 741--745
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 759--759
+[]|\T1/cmr/m/n/12 Fecha de na-ci-mien-to en for-ma-to
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 766--766
+[]|\T1/cmr/m/n/12 Numero de no-tas crea-das por el
+ []
+
+
+Overfull \hbox (18.28838pt too wide) in alignment at lines 745--767
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+
+Overfull \hbox (18.28838pt too wide) in alignment at lines 767--787
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 787.
+LaTeX Info: Redefining \% on input line 787.
+[47]
+LaTeX Info: Redefining \. on input line 787.
+LaTeX Info: Redefining \% on input line 787.
+ [48]
+Overfull \hbox (15.89243pt too wide) in paragraph at lines 796--807
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 814.
+LaTeX Info: Redefining \% on input line 814.
+[49]
+Overfull \hbox (15.89243pt too wide) in paragraph at lines 817--828
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 851.
+LaTeX Info: Redefining \% on input line 851.
+[50]
+Underfull \hbox (badness 1436) in paragraph at lines 889--889
+[]|\T1/cmr/m/n/12 InformaciÛn del ar-chi-vo ge-ne-ra-do
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 893
+ []
+
+LaTeX Info: Redefining \. on input line 893.
+LaTeX Info: Redefining \% on input line 893.
+[51]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 933--933
+[]\T1/cmr/m/n/12 Entrada de la ta-bla li-
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 933--933
+\T1/cmr/m/n/12 kes_facebook con la que es-t·
+ []
+
+
+Overfull \hbox (12.62924pt too wide) in paragraph at lines 929--935
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 942.
+LaTeX Info: Redefining \% on input line 942.
+[52]
+LaTeX Info: Redefining \. on input line 959.
+LaTeX Info: Redefining \% on input line 959.
+ [53]
+Underfull \hbox (badness 10000) in paragraph at lines 995--995
+[]\T1/cmr/m/n/12 comments_facebook_id_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--995
+[]\T1/cmr/m/n/12 Post de la ta-bla com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--995
+\T1/cmr/m/n/12 ments_facebook con el que
+ []
+
+LaTeX Info: Redefining \. on input line 1004.
+LaTeX Info: Redefining \% on input line 1004.
+[54]
+Overfull \hbox (1.18228pt too wide) in paragraph at lines 1038--1038
+[]\T1/cmr/m/n/12 type_affiliations_facebook_id
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1039--1039
+[]\T1/cmr/m/n/12 user_facebook_id_user_ fa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1039
+[]\T1/cmr/m/n/12 Usuario de la ta-bla
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 1039--1039
+\T1/cmr/m/n/12 user_facebook con el que es-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 1071.
+LaTeX Info: Redefining \% on input line 1071.
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
+[]\T1/cmr/m/n/12 relationship_facebook_id
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+ [56]
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+ [57]
+\openout2 = `capitulo3.aux'.
+
+ (./capitulo3.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [58
+
+
+
+]
+Cap\'{\i }tulo 4.
+[59] <Figuras/ArqServRestFul.png, id=246, 636.3775pt x 264.99pt>
+File: Figuras/ArqServRestFul.png Graphic file (type png)
+
+<use Figuras/ArqServRestFul.png>
+Package pdftex.def Info: Figuras/ArqServRestFul.png used on input line 33.
+(pdftex.def)             Requested size: 227.61975pt x 113.81004pt.
+
+<Figuras/imgCasosUsoRestFul.png, id=247, 1203.49625pt x 546.04pt>
+File: Figuras/imgCasosUsoRestFul.png Graphic file (type png)
+
+<use Figuras/imgCasosUsoRestFul.png>
+Package pdftex.def Info: Figuras/imgCasosUsoRestFul.png used on input line 42.
+(pdftex.def)             Requested size: 483.70381pt x 312.97906pt.
+
+Overfull \hbox (28.45973pt too wide) in paragraph at lines 42--43
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[60 <./Figuras/ArqServRestFul.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+ [61 <./Figuras/imgCasosUsoRestFul.png>]
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+ [62]
+<Figuras/imgPackageSNSdataBaseIntegratorServer.png, id=259, 725.71124pt x 333.2
+45pt>
+File: Figuras/imgPackageSNSdataBaseIntegratorServer.png Graphic file (type png)
+
+ <use Figuras/imgPackageSNSdataBaseIntegratorServer.png>
+Package pdftex.def Info: Figuras/imgPackageSNSdataBaseIntegratorServer.png used
+ on input line 80.
+(pdftex.def)             Requested size: 284.53223pt x 142.2654pt.
+
+<Figuras/imgPackUser.png, id=260, 1881.0275pt x 1521.685pt>
+File: Figuras/imgPackUser.png Graphic file (type png)
+
+<use Figuras/imgPackUser.png>
+Package pdftex.def Info: Figuras/imgPackUser.png used on input line 87.
+(pdftex.def)             Requested size: 512.13214pt x 426.7887pt.
+
+Overfull \hbox (56.88806pt too wide) in paragraph at lines 87--88
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 95.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [63 <./Figuras/imgPackageSNSdataBaseIntegratorServer.png>]
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+ [64]
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+ [65]
+Overfull \hbox (16.85558pt too wide) in paragraph at lines 141--142
+[]\T1/cmr/m/n/12 MÈtodo \T1/cmr/bx/n/12 ge-tEn-tity\T1/cmr/m/n/12 : Es-te mÈ-to
+-do de-vol-ve-r· un ob-je-to de ti-po \T1/cmr/bx/n/12 es.uah.cc.ie.persistence
+ []
+
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
+[66]
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 174.
+
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+[67]
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+ [68]
+Overfull \hbox (0.1016pt too wide) in paragraph at lines 203--203
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findAll", query = "SELE
+CT u FROM[] 
+ []
+
+
+Overfull \hbox (12.44858pt too wide) in paragraph at lines 205--205
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByUid", query = "SE
+LECT u FROM[] 
+ []
+
+
+Overfull \hbox (12.44858pt too wide) in paragraph at lines 207--207
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByUserName", query 
+= "SELECT u[] 
+ []
+
+
+Overfull \hbox (18.62207pt too wide) in paragraph at lines 209--209
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByUserEmail", query
+ = "SELECT u[] 
+ []
+
+
+Overfull \hbox (43.31604pt too wide) in paragraph at lines 211--211
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByLegalAccepted", q
+uery = "SELECT u[] 
+ []
+
+
+Overfull \hbox (6.27509pt too wide) in paragraph at lines 212--212
+ []         \T1/cmtt/m/n/12 FROM UserSettings u WHERE u.legalAccepted = :legalA
+ccepted"),[] 
+ []
+
+
+Overfull \hbox (18.62207pt too wide) in paragraph at lines 213--213
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByLastCheck", query
+ = "SELECT u[] 
+ []
+
+
+Overfull \hbox (18.62207pt too wide) in paragraph at lines 215--215
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByUidPublic", query
+ = "SELECT u[] 
+ []
+
+
+Overfull \hbox (37.14255pt too wide) in paragraph at lines 217--217
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByAppActivated", qu
+ery = "SELECT u[] 
+ []
+
+
+Overfull \hbox (30.96906pt too wide) in paragraph at lines 219--219
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByUserSession", que
+ry = "SELECT u[] 
+ []
+
+
+Overfull \hbox (30.96906pt too wide) in paragraph at lines 221--221
+ []    \T1/cmtt/m/n/12 @NamedQuery(name = "UserSettings.findByBackupCheck", que
+ry = "SELECT u[] 
+ []
+
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
+[69]
+LaTeX Info: Redefining \. on input line 258.
+LaTeX Info: Redefining \% on input line 258.
+ [70]
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
+ [71]
+Overfull \hbox (34.59993pt too wide) in paragraph at lines 306--307
+[]\T1/cmr/m/n/12 Este mÈ-to-do in-tro-du-ce un nue-vo usua-rio, con to-da su in
+-for-ma-ciÛn, en la ta-bla \T1/cmr/bx/n/12 user_settings\T1/cmr/m/n/12 .
+ []
+
+
+Overfull \hbox (44.8088pt too wide) in paragraph at lines 321--321
+[]                                                \T1/cmtt/m/n/12 throws Unifor
+mInterfaceException [] 
+ []
+
+LaTeX Info: Redefining \. on input line 326.
+LaTeX Info: Redefining \% on input line 326.
+[72]
+Overfull \hbox (13.94135pt too wide) in paragraph at lines 354--354
+[]\T1/cmtt/m/n/12 public <T> T userSettings_setNewAngelsCollectionByUid(Class<T
+> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 365.
+LaTeX Info: Redefining \% on input line 365.
+[73]
+Overfull \hbox (21.47568pt too wide) in paragraph at lines 365--366
+[]\T1/cmr/bx/n/12 String uid\T1/cmr/m/n/12 : Iden-ti-fi-ca-dor de los re-cur-so
+s de idio-ma se-g˙n la ta-bla \T1/cmr/bx/n/12 lo-ca-le_settings\T1/cmr/m/n/12 .
+ 
+ []
+
+LaTeX Info: Redefining \. on input line 401.
+LaTeX Info: Redefining \% on input line 401.
+[74]
+LaTeX Info: Redefining \. on input line 437.
+LaTeX Info: Redefining \% on input line 437.
+ [75]
+Overfull \hbox (13.94135pt too wide) in paragraph at lines 460--460
+[]\T1/cmtt/m/n/12 public <T> T settingsFltWall_getAngelsCollectionByUid(Class<T
+> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 473.
+LaTeX Info: Redefining \% on input line 473.
+[76]
+LaTeX Info: Redefining \. on input line 508.
+LaTeX Info: Redefining \% on input line 508.
+ [77]
+LaTeX Info: Redefining \. on input line 543.
+LaTeX Info: Redefining \% on input line 543.
+ [78]
+Overfull \hbox (32.46182pt too wide) in paragraph at lines 550--550
+[]\T1/cmtt/m/n/12 public <T> T settingsFltFriends_getAngelsCollectionByUid(Clas
+s<T> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 582.
+LaTeX Info: Redefining \% on input line 582.
+[79]
+LaTeX Info: Redefining \. on input line 617.
+LaTeX Info: Redefining \% on input line 617.
+ [80]
+Overfull \hbox (13.94135pt too wide) in paragraph at lines 642--642
+[]\T1/cmtt/m/n/12 public <T> T settingsFltPriv_getAngelsCollectionByUid(Class<T
+> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 658.
+LaTeX Info: Redefining \% on input line 658.
+[81]
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+ [82]
+LaTeX Info: Redefining \. on input line 729.
+LaTeX Info: Redefining \% on input line 729.
+ [83]
+Overfull \hbox (13.94135pt too wide) in paragraph at lines 736--736
+[]\T1/cmtt/m/n/12 public <T> T settingsFltVist_getAngelsCollectionByUid(Class<T
+> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 768.
+LaTeX Info: Redefining \% on input line 768.
+[84]
+LaTeX Info: Redefining \. on input line 805.
+LaTeX Info: Redefining \% on input line 805.
+ [85]
+LaTeX Info: Redefining \. on input line 847.
+LaTeX Info: Redefining \% on input line 847.
+ [86]
+LaTeX Info: Redefining \. on input line 885.
+LaTeX Info: Redefining \% on input line 885.
+ [87]
+LaTeX Info: Redefining \. on input line 922.
+LaTeX Info: Redefining \% on input line 922.
+ [88]
+Overfull \hbox (2.35205pt too wide) in paragraph at lines 935--936
+[]\T1/cmr/m/n/12 Salida: De-vol-ve-r· la in-for-ma-ciÛn ac-tua-li-za-da del usu
+a-rio en la ta-bla \T1/cmr/bx/n/12 user_Facebook
+ []
+
+
+Overfull \hbox (26.06854pt too wide) in paragraph at lines 956--957
+[]\T1/cmr/m/n/12 Salida: De-vol-ve-r· la in-for-ma-ciÛn in-ser-ta-da del co-men
+-ta-rio en la ta-bla \T1/cmr/bx/n/12 stream_Facebook
+ []
+
+LaTeX Info: Redefining \. on input line 957.
+LaTeX Info: Redefining \% on input line 957.
+[89]
+Overfull \hbox (37.09775pt too wide) in paragraph at lines 996--997
+[]\T1/cmr/m/n/12 Salida: De-vol-ve-r· la in-for-ma-ciÛn ac-tua-li-za-da del co-
+men-ta-rio en la ta-bla \T1/cmr/bx/n/12 stream_Facebook
+ []
+
+LaTeX Info: Redefining \. on input line 997.
+LaTeX Info: Redefining \% on input line 997.
+[90]
+Overfull \hbox (37.09775pt too wide) in paragraph at lines 1018--1019
+[]\T1/cmr/m/n/12 Salida: De-vol-ve-r· la in-for-ma-ciÛn ac-tua-li-za-da del co-
+men-ta-rio en la ta-bla \T1/cmr/bx/n/12 stream_Facebook
+ []
+
+LaTeX Info: Redefining \. on input line 1038.
+LaTeX Info: Redefining \% on input line 1038.
+[91]
+LaTeX Info: Redefining \. on input line 1074.
+LaTeX Info: Redefining \% on input line 1074.
+ [92]
+Overfull \hbox (32.46182pt too wide) in paragraph at lines 1097--1097
+[]\T1/cmtt/m/n/12 public <T> T userFacebook_getStreamFacebookByUpdatedTime(Clas
+s<T> responseType,[] 
+ []
+
+
+Overfull \hbox (50.9823pt too wide) in paragraph at lines 1117--1117
+[]\T1/cmtt/m/n/12 public <T> T userFacebook_getFriendsFacebookByUidCollection(C
+lass<T> responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 1117.
+LaTeX Info: Redefining \% on input line 1117.
+[93]
+Overfull \hbox (1.59436pt too wide) in paragraph at lines 1135--1135
+[]\T1/cmtt/m/n/12 public <T> T userFacebook_isNewFriendsFacebookByUid(Class<T> 
+responseType,[] 
+ []
+
+LaTeX Info: Redefining \. on input line 1157.
+LaTeX Info: Redefining \% on input line 1157.
+[94]
+LaTeX Info: Redefining \. on input line 1200.
+LaTeX Info: Redefining \% on input line 1200.
+ [95])
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+ [96]
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+ [97 <./Figuras/imgPackUser.png>]
+\openout2 = `capitulo4.aux'.
+
+ (./capitulo4.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [98
+
+
+
+]
+Cap\'{\i }tulo 5.
+) [99]
+\openout2 = `capitulo5.aux'.
+
+ (./capitulo5.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [100
+
+
+
+]
+Cap\'{\i }tulo 6.
+) [101]
+\openout2 = `capitulo6.aux'.
+
+ (./capitulo6.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [102
+
+
+
+]
+Cap\'{\i }tulo 7.
+) [103]
+\openout2 = `apendice-a.aux'.
+
+ (./apendice-a.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [104
+
+
+
+]
+Ap\'{e}ndice A.
+[105]
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+ [106]
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+ [107]
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+ [108]
+Overfull \hbox (10.41391pt too wide) in paragraph at lines 98--99
+[]\T1/cmr/bx/n/12 426 Ac-tua-li-za-ciÛn re-que-ri-da (RFC 2817)\T1/cmr/m/n/12 :
+ El clien-te de-be-rÌa cam-biar-se a TLS/1.0. 
+ []
+
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+[109])
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+ [110]
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+[]\T1/cmr/m/it/12 HTTP Ex-ten-sions for Dis-tri-bu-ted Aut-ho-ring -- WEB-DAV\T
+1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 12--14
+[]\T1/cmr/m/it/12 HTTP Ex-ten-sions for Web Dis-tri-bu-ted Aut-ho-ring and Ver-
+sio-ning (Web-DAV)\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+[]\T1/cmr/m/it/12 OpenSocial Re-sour-ces API\T1/cmr/m/n/12 .  Goo-gle-Co-de, ht
+tp://opensocial-
+ []
+
+
+Overfull \hbox (49.68488pt too wide) in paragraph at lines 42--45
+[]\T1/cmr/m/n/12 Facebook De-ve-lo-pers.  \T1/cmr/m/it/12 Fa-ce-book FQL Api\T1
+/cmr/m/n/12 .  https://developers.facebook.com/docs/reference/fql. 
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 47--50
+[]\T1/cmr/m/n/12 Rafael Na-va-rro Mar-set.  \T1/cmr/m/it/12 REST vs Web Ser-vi-
+ces\T1/cmr/m/n/12 .  users.dsic.upv.es/ rna-va-
+ []
+
+
+Overfull \hbox (74.4896pt too wide) in paragraph at lines 61--64
+[]\T1/cmr/m/n/12 Wikipedia.  \T1/cmr/m/it/12 Co-di-gos de es-ta-do HTTP\T1/cmr/
+m/n/12 .  http://en.wikipedia.org/wiki/List_of_HTTP_status_codes. 
+ []
+
+[111
+
+
+
+])
+LaTeX Info: Redefining \. on input line 143.
+LaTeX Info: Redefining \% on input line 143.
+ [112]
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/tfc.aux
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/previo.aux)
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/dedicatoria.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/agradecimientos.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/resumen.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/introduccion.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo1.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo2.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo3.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo4.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo5.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/capitulo6.aux)
+(/Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃÅn/tfc/.texpadtmp
+/apendice-a.aux)) ) 
+Here is how much of TeX's memory you used:
+ 4631 strings out of 493488
+ 64443 string characters out of 3141326
+ 147541 words of memory out of 3000000
+ 7723 multiletter control sequences out of 15000+200000
+ 26079 words of font info for 66 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,10n,43p,1041b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super
+/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-supe
+r/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/
+sfbx1440.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sf
+bx1728.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx
+2488.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfcc12
+00.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfcc1728
+.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0600.p
+fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
+Output written on /Users/josejavierblecuadepedro/Dropbox/PROYECTO/DocumentacioÃ
+Ån/tfc/.texpadtmp/tfc.pdf (122 pages, 1854977 bytes).
+PDF statistics:
+ 491 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

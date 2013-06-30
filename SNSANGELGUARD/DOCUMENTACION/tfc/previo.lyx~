@@ -1,0 +1,458 @@
+#LyX file created by tex2lyx 1.6.7
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%**********************************************************
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%GENERA LA HOJA OFICIAL DE CALIFICACIÓN PARA PROYECTOS FIN DE CARRERA
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%SEGÚN EL FORMATO DE LA UNIVERSIDAD DE ALCALÁ Y DEL DEPAR-
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%TAMENTO DE TEORÍA DE LA SEÑAL Y COMUNICACIONES.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%**********************************************************
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\size largest
+
+\shape smallcaps
+Universidad de Alcalá
+\shape default
+
+\newline
+ 
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Nombre de la escuela-> seleccione el que corresponda.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+Escuela Politécnica Superior
+\series default
+
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+textbf{Escuela Técnica Superior de Ingeniería Informática}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Titulación -> escriba su titulación
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+La titulación del alumno
+\newline
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Para compilar con latex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+
+
+\begin_inset Graphics 
+	filename Figuras/LogoUAH.eps
+	width 4cm
+
+\end_inset
+
+
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Para compilar con pdflatex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+includegraphics[width=4cm]{Figuras/LogoUAH.png}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+
+
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+
+Proyecto Fin de Carrera
+\newline
+ 
+\series bold
+
+\size giant
+
+\shape smallcaps
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Título del Proyecto fin de carrera
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+
+\series default
+
+\newline
+ 
+\begin_inset VSpace 0.5cm
+\end_inset
+
+ 
+\size large
+Autor: Nombre y apellidos
+\newline
+ Director: Nombre y apellidos.
+\newline
+ 
+\begin_inset VSpace 0.5cm
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\size large
+
+
+\series bold
+TRIBUNAL:
+\series default
+
+\newline
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\shape italic
+Presidente: D. Nombre y apellidos del presidente
+\shape default
+
+\newline
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\shape italic
+Vocal 1º: D. Nombre y apellidos del vocal 1
+\shape default
+
+\newline
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\shape italic
+Vocal 2º: D. Nombre y apellidos del vocal 2
+\shape default
+
+\newline
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\series bold
+CALIFICACIÓN:
+\series default
+............................................................ FECHA:.................... 
+\newline
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Final de la hoja de calificación.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

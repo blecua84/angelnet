@@ -1,0 +1,61 @@
+#LyX file created by tex2lyx 1.6.7
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass book
+\language spanish
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+
+Resumen
+\end_layout
+
+\begin_layout Standard
+
+Escribir un pequeño resumen del proyecto (100 palabras aproximandamente).
+\end_layout
+
+\begin_layout Chapter
+
+Abstract
+\end_layout
+
+\begin_layout Standard
+
+El resumen en inglés. 
+\end_layout
+
+\end_body
+\end_document

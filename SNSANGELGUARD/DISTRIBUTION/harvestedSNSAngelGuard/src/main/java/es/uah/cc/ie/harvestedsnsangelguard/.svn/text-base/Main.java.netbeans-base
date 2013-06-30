@@ -1,0 +1,22 @@
+package es.uah.cc.ie.harvestedsnsangelguard;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Main {
+
+    public static void main(String[] args) throws MalformedURLException {
+        try {
+            String servletRequest = "http://oe.dynalias.net:8080/SNSAngelGuardFB/harvestedSNS/";
+            URL servlet = new URL(servletRequest);
+            URLConnection servletConn = servlet.openConnection();
+            servletConn.setDoInput(true);
+            servletConn.setDoOutput(true);
+            servletConn.getExpiration();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}

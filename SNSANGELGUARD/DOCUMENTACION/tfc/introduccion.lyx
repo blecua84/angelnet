@@ -1,0 +1,773 @@
+#LyX file created by tex2lyx 1.6.7
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass book
+\language spanish
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Formato para un capítulo cualquiera
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Título del capítulo
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+Introducción.
+\end_layout
+
+\begin_layout Section
+
+¿Cómo escribir tu PFC en LaTeX ?
+\end_layout
+
+\begin_layout Standard
+
+Escribir un PFC es una tarea de gran importancia. La herramienta de edición LaTeX te va a permitir editar tu PFC de una forma elegante, útil y segura. Simplemente dedicando unos minutos a comprender cómo están organizados los ficheros que acabas de descargar, y realizando algunas pruebas con ellos, podrás comenzar a escribir el tuyo.
+\end_layout
+
+\begin_layout Subsection
+
+La mejor manera para aprender a programar es programando.
+\end_layout
+
+\begin_layout Standard
+
+LaTeX es un lenguaje de programación como tantos otros a los que estás acostumbrado. Puedes encontrar mucha información y manuales en Internet, concretamente te recomiendo las referencias siguientes: 
+\begin_inset LatexCommand cite
+after ""
+before ""
+key "Latex1"
+
+\end_inset
+
+ y 
+\begin_inset LatexCommand cite
+after ""
+before ""
+key "Latex2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Este documento PDF que estás leyendo ha sido generado mediante LaTeX utilizando los ficheros: 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+tfc.tex
+\shape default
+ : es el fichero principal, desde él se hacen las llamadas a los demás ficheros, que pueden ser editados de forma independiente. Si abres este fichero con cualquier editor de textos verás que contiene muchas sentencias que ahora desconoces. Puedes observar que el fichero tiene una zona de cabecera donde se incluyen todos los paquetes a utilizar. Luego se define el título del documento y su autor, para, al final, ir añadiendo los capítulos y secciones de tu PFC. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+previo.tex
+\shape default
+: genera la hoja de calificación oficial para un PFC de la Universidad de Alcalá. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+dedicatoria.tex
+\shape default
+: para que escribas tus dedicatorias. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+agradecimientos.tex
+\shape default
+: para que escribas los agradecimientos, que seguro son muchos. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+resumen.tex
+\shape default
+: aquí debes escribir un resumen de tu trabajo. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+introduccion.tex
+\shape default
+: este es un capítulo modelo, en el que encontrarás los comandos utilizados para generar lo que estás ahora mismo leyendo. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+apendice-a.tex
+\shape default
+: un modelo de apéndice, muy utilizado en un PFC cuando queremos incluir en el documento final código fuente, planos, manuales, \SpecialChar \ldots{}
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\shape italic
+bibliografia-pfc.bib
+\shape default
+ : este es un fichero 
+\shape italic
+.bib
+\shape default
+ (no lleva la extensión .tex como los anteriores). Es un fichero de bibliografía 
+\series bold
+BibTex
+\series default
+. La bibliografía es una parte fundamental de un PFC, y es por ello que debemos poner especial cuidado a la hora de editarla, ya que va a permitir que futuros lectores de tu PFC, que seguro serán muchos, puedan acudir a las referencias cuando no entiendan algo, o cuando pretendan retomar tu trabajo y continuar con él para mejorarlo. Sobre BibTex también existen muchos manuales, pero encontrarás información útil en 
+\begin_inset LatexCommand cite
+after ""
+before ""
+key "bibtex1"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+Para probar que todo esto funciona sólo tienes que compilar el fichero 
+\shape italic
+tfc.tex
+\shape default
+, ¿pero cómo?. Evidentemente necesitas un compilador. Veamos que opciones existen:
+\end_layout
+
+\begin_layout Enumerate
+
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+underline{Plataforma Linux (Unix)}
+\end_layout
+
+\end_inset
+
+
+\series default
+: simplemente necesitas tener instalado el compilador 
+\shape italic
+latex
+\shape default
+, que suele estar incluido en un paquete con el mismo nombre. Existe un entorno de trabajo bastante agradable y útil, que es 
+\shape italic
+Kile
+\shape default
+, sobre el que podrás editar tus documentos de forma cómoda, gráfica y sencilla. También puedes utilizar la herramienta 
+\shape italic
+Lyx
+\shape default
+, que te permite saber cómo va quedando tu documento a medida que escribes, sin necesidad de primero editar el código y luego compilar, es decir, es un software de filosofía WYSIWYM (What You See Is What You Mean). 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+underline{Otras plataformas}
+\end_layout
+
+\end_inset
+
+
+\series default
+: para trabajar con LaTeX sobre otros sistemas operativos dispones de gran cantidad de software. Simplemente voy a indicarte algunas herramientas que son de libre distribución: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Compilador: el único que conozco es 
+\shape italic
+MikTex
+\shape default
+, lo puedes descargar de su web oficial. 
+\end_layout
+
+\begin_layout Itemize
+
+Editor: puedes utilizar TeXnicCenter o WinShell, ambos de libre distribución. 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+Una sugerencia: 
+\series bold
+
+\shape italic
+¿no crees que es un buen momento para trabajar desde Linux?
+\shape default
+
+\series default
+. Si no tienes este sistema operativo en tu ordenador, prueba a instalar la distribución 
+\shape italic
+Ubuntu
+\shape default
+ (http://www.ubuntu.com), es realmente sencillo funcionar con ella, y además puedes descargarla desde la web o incluso pedir un cd de forma totalmente gratuita.
+\end_layout
+
+\begin_layout Standard
+
+Ahora que conoces algunas herramientas, debes probar a compilar el fichero 
+\shape italic
+tfc.tex
+\shape default
+ hasta que obtengas como resultado este pdf.
+\end_layout
+
+\begin_layout Subsection
+
+Algunos detalles más.
+\end_layout
+
+\begin_layout Standard
+
+Con LaTeX puedes editar tus propias tablas (Tabla 
+\begin_inset LatexCommand ref
+reference "tabla:primera"
+
+\end_inset
+
+), e incluso añadir gráficos a tus documentos (Figura 
+\begin_inset LatexCommand ref
+reference "grafico:primero"
+
+\end_inset
+
+). A la hora de añadir un gráfico la mejor opción es trabajar con formatos de imagen 
+\shape italic
+.eps
+\shape default
+, vectorial preferiblemente, aunque puedes incrustar imágenes en formato bmp, jpg y otros muchos.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="center" valignment="top" leftline="true" rightline="true">
+<column alignment="center" valignment="top" rightline="true">
+<column alignment="center" valignment="top" rightline="true">
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\series bold
+Medida
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\series bold
+Error
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\series bold
+Porcentaje
+\series default
+ % 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+12 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+23.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+22 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+-1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+13 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Standard
+
+\begin_inset OptArg
+status collapsed
+
+\begin_layout Standard
+
+El título corto de la tabla.
+\end_layout
+
+\end_inset
+
+El título de la tabla.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset LatexCommand label
+name "tabla:primera"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Para compilar con latex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Graphics 
+	filename Figuras/LogoUAH.eps
+	width 4cm
+
+\end_inset
+
+
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Para compilar con pdflatex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+includegraphics[width=4cm]{Figuras/LogoUAH.png}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Caption
+
+\begin_layout Standard
+
+\begin_inset OptArg
+status collapsed
+
+\begin_layout Standard
+
+El título corto de la gráfica.
+\end_layout
+
+\end_inset
+
+El título de la gráfica.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "grafico:primero"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+LaTeX también te permite editar ecuaciones de forma muy sencilla y realmente elegante, observa. 
+\begin_inset Formula \begin{equation}
+I = \! \int_{-\infty}^\infty f(x)\,dx \label{eq:fine}.
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\label{eq:mdiv}
+m(T) =
+\begin{cases}
+0 & \text{$T > T_c$} \\
+\bigl(1 - [\sinh 2 \beta J]^{-4} \bigr)^{\! 1/8} & \text{$T < T_c$}
+\end{cases}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align}
+\textbf{T} &=
+\begin{pmatrix}
+T_{++} \hfill & T_{+-} \\
+T_{-+} & T_{--} \hfill 
+\end{pmatrix} , \nonumber \\
+& =
+\begin{pmatrix}
+e^{\beta (J + B)} \hfill & e^{-\beta J} \hfill \\
+e^{-\beta J} \hfill & e^{\beta (J - B)} \hfill
+\end{pmatrix}.
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Para terminar.
+\end_layout
+
+\begin_layout Standard
+
+En el fichero 
+\shape italic
+introduccion.tex
+\shape default
+ encontrarás todo el código que se ha utilizado para generar este capítulo, échale un vistazo y trata de entender todo aquello que está escrito en él. Si consigues generar este documento pdf de nuevo, es que estás preparado para editar tu propio PFC incluyendo los nuevos capítulos que necesites.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{large}
+\end_layout
+
+\end_inset
+
+
+\series bold
+Adelante y buena suerte.
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{large}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
