@@ -18,7 +18,11 @@ In MySql Server, install the file socialNetwork_20130630.sql contains in the fol
 
 3. Copy the file config.properties in the path /usr/local/snsangelguardfb/config and change the settings of the host's server.
 
-4. Copy the proyect harvestedSNSAngelGuard in the path /usr/local/snsangelguardfb/harvested
+4. Copy the proyect harvestedSNSAngelGuard in the path /usr/local/snsangelguardfb/harvested. Modifies the script 
+harvestedSNSAngelGuardFB.sh the line:
+mvn exec:java -Dexec.mainClass="es.uah.cc.ie.harvestedsnsangelguard.Main host pathToKeyStore passwdKeyStore
+with the settings of the signed digital certificate installed in the Unix Server.
+
 
 5. Modifies the cron file of the Unix Server adding the next sentence:
 	00 3 * * * root /usr/local/snsangelguardfb/harvested/harvestedSNSAngelGuard/script/harvestedSNSAngelGuardFB.sh
