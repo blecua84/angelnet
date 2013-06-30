@@ -1,0 +1,18 @@
+Instalation guide:
+
+Technical requirements:
+- Unix Server, with Apache Tomcat Server, v. 7.0.34, and MySql Server, v. 5.6.11.
+- Signed digital certificate with Java keytool.
+- Maven installed, v. 3.0.4.
+
+1. Installing data base SocialNetwork
+In MySql Server, install the file socialNetwork_20130630.sql contains in the folder DB.
+
+2. Create the folder structure where you will store the settings's application in te Unix Server:
+	2.1. Create in the path /usr/local the next structure:
+	       /usr/local/snsangelguardfb
+	2.2. Create the folfer 'config' in the path /usr/local/snsangelguardfb
+	2.3. Create the folder 'harvested' in the path /usr/local/snsangelguardfb and copy the Java Proyect 
+	harvestedSNSAngelGuardFB.
+	2.3. Create the folder 'logs' in the path /usr/local/snsangelguardfb/harvested
+
